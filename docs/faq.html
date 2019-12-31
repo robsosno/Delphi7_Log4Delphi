@@ -1,0 +1,342 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.7">
+<meta name="Forrest-skin-name" content="pelt">
+<title>Frequently Asked Questions about Log4Delphi</title>
+<link type="text/css" href="skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="skin/print.css" rel="stylesheet">
+<link type="text/css" href="skin/profile.css" rel="stylesheet">
+<script src="skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="">
+</head>
+<body onload="init()">
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<div class="breadtrail">
+<a href="http://www.sourceforge.net/">SourceForge</a> &gt; <a href="http://log4delphi.sourceforge.net/">Log4Delphi</a><script src="skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<div class="header">
+<div class="grouplogo">
+<a href=""></a>
+</div>
+<div class="projectlogo">
+<a href="http://log4delphi.sourceforge.net/"><img class="logoImage" alt="Log4Delphi" src="images/logo.gif" title="Log4Delphi Logging Suite for Borland Delphi"></a>
+</div>
+<div class="searchbox">
+<form action="http://www.google.com/search" method="get" class="roundtopsmall">
+<input value="http://log4delphi.sourceforge.net" name="sitesearch" type="hidden"><input onFocus="getBlank (this, 'Search the site with google');" size="25" name="q" id="query" type="text" value="Search the site with google">&nbsp; 
+                    <input attr="value" name="Search" value="Search" type="submit">
+</form>
+</div>
+<ul id="tabs">
+<li>
+<a class="base-not-selected" href="index.html">Log4Delphi</a>
+</li>
+<li>
+<a class="base-not-selected" href="quickstart.html">Quick Start</a>
+</li>
+<li class="current">
+<a class="base-selected" href="overview.html">Documentation</a>
+</li>
+<li>
+<a class="base-not-selected" href="developerguide.html">Contributing</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<div id="level2tabs"></div>
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<div id="menu">
+<div onclick="SwitchMenu('menu_selected_1.1', 'skin/')" id="menu_selected_1.1Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">Documentation</div>
+<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="overview.html" title="Documentation Overview">Overview</a>
+</div>
+<div class="menuitem">
+<a href="getstarted.html" title="Getting Started With Log4Delphi">Get Started</a>
+</div>
+<div class="menuitem">
+<a href="tutorial.html" title="Log4Delphi Tutorial">Tutorial</a>
+</div>
+<div class="menuitem">
+<a href="userguide.html" title="Log4Delphi User Guide">User Guide</a>
+</div>
+<div class="menupage">
+<div class="menupagetitle">FAQ</div>
+</div>
+<div class="menuitem">
+<a href="http://log4delphi.sourceforge.net/api/html/Log4Delphi.htm" title="Log4Delphi API">API</a>
+</div>
+<div class="menuitem">
+<a href="troubleshooting.html" title="Troubleshooting Log4Delphi">Troubleshooting</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2', 'skin/')" id="menu_1.2Title" class="menutitle">How-To</div>
+<div id="menu_1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="howto-pkg.html" title="How-To Create A package">Create A Package</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<div id="credit2"></div>
+</div>
+<div id="content">
+<script language="Javascript" type="text/javascript">
+function printit() {
+  if (window.print) {
+    window.focus();
+    window.print();
+  }
+}
+        </script><script language="Javascript" type="text/javascript">
+var NS = (navigator.appName == "Netscape");
+var VERSION = parseInt(navigator.appVersion);
+if (VERSION > 3) {
+  document.write('<div title="Print this Page" class="printlink">');
+  document.write('  <a class="dida" href="javascript:printit()">');
+  document.write('    <img alt="print - icon" src="skin/images/printer.gif" class="skin">');
+  document.write('    <br>');
+  document.write('  PRINT</a>');
+  document.write('</div>');
+}
+        </script>
+<div title="raw XML" class="xmllink">
+<a class="dida" href="faq.xml"><img alt="XML - icon" src="skin/images/xmldoc.gif" class="skin"><br>
+        XML</a>
+</div>
+<div title="Portable Document Format" class="pdflink">
+<a class="dida" href="faq.pdf"><img alt="PDF -icon" src="skin/images/pdfdoc.gif" class="skin"><br>
+        PDF</a>
+</div>
+<h1>Frequently Asked Questions about Log4Delphi</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#Questions">Questions</a>
+<ul class="minitoc">
+<li>
+<a href="#Getting+Started+and+Building+Log4Delphi">Getting Started and Building Log4Delphi</a>
+<ul class="minitoc">
+<li>
+<a href="#What+versions+of+Delphi+does+Log4Delphi+support%3F">What versions of Delphi does Log4Delphi support?</a>
+</li>
+<li>
+<a href="#Where+can+I+read+an+overview+about+how+to+work+with+%0A%09%09%09%09%09%09Log4Delphi%3F">Where can I read an overview about how to work with 
+						Log4Delphi?</a>
+</li>
+<li>
+<a href="#Which+version+of+Log4Delphi+does+the+website+documentation+%0A%09%09%09%09%09%09relate+to%3F">Which version of Log4Delphi does the website documentation 
+						relate to?</a>
+</li>
+<li>
+<a href="#How+can+I+use+CVS+to+keep+up+to+date+with+the+latest+%0A%09%09%09%09%09%09codebase%3F">How can I use CVS to keep up to date with the latest 
+						codebase?</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Technical">Technical</a>
+<ul class="minitoc">
+<li>
+<a href="#Does+It+Run+On+Linux%3F">Does It Run On Linux?</a>
+</li>
+<li>
+<a href="#What+is+the+MD5+file+in+the+file+releases%3F">What is the MD5 file in the file releases?</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Older+Versions">Older Versions</a>
+<ul class="minitoc">
+<li>
+<a href="#How+can+I+upgrade+to+the+latest+version%3F">How can I upgrade to the latest version?</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#General">General</a>
+<ul class="minitoc">
+<li>
+<a href="#Where+are+the+log+files+to+find+more+infomation+about+%0A%09%09%09%09%09%09errors%3F">Where are the log files to find more infomation about 
+						errors?</a>
+</li>
+<li>
+<a href="#How+can+I+help+or+contribute%3F">How can I help or contribute?</a>
+</li>
+<li>
+<a href="#Why+create+new+logging+project+for+Delphi%3F+Analogous+project+Log4D+already+exists%3F">Why create new logging project for Delphi? Analogous project Log4D already exists?</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        
+<a name="N1000D"></a><a name="Questions"></a>
+<h2 class="boxed">Questions</h2>
+<div class="section">
+<a name="N10013"></a><a name="Getting+Started+and+Building+Log4Delphi"></a>
+<h3 class="boxed">Getting Started and Building Log4Delphi</h3>
+<a name="N10019"></a><a name="What+versions+of+Delphi+does+Log4Delphi+support%3F"></a>
+<h4 class="faq">What versions of Delphi does Log4Delphi support?</h4>
+<div align="right">
+<a href="#What+versions+of+Delphi+does+Log4Delphi+support%3F-menu">^</a>
+</div>
+<div style="margin-left: 15px">
+<p>Log4Delphi is developed on Delphi 6 Enterprise and has been
+						made to compile on Delphi 5. It is assumed that later
+						versions of Delphi should work. Prior versions will most
+						likely run into errors. We will release packages for
+						prior versions of Delphi in later versions of Log4Delphi.</p>
+</div>
+<a name="N10023"></a><a name="Where+can+I+read+an+overview+about+how+to+work+with+%0A%09%09%09%09%09%09Log4Delphi%3F"></a>
+<h4 class="faq">Where can I read an overview about how to work with 
+						Log4Delphi?</h4>
+<div align="right">
+<a href="#Where+can+I+read+an+overview+about+how+to+work+with+%0A%09%09%09%09%09%09Log4Delphi%3F-menu">^</a>
+</div>
+<div style="margin-left: 15px">
+<p>See the <a href="getstarted.html">Getting Started</a> 
+						guide.</p>
+</div>
+<a name="N10031"></a><a name="Which+version+of+Log4Delphi+does+the+website+documentation+%0A%09%09%09%09%09%09relate+to%3F"></a>
+<h4 class="faq">Which version of Log4Delphi does the website documentation 
+						relate to?</h4>
+<div align="right">
+<a href="#Which+version+of+Log4Delphi+does+the+website+documentation+%0A%09%09%09%09%09%09relate+to%3F-menu">^</a>
+</div>
+<div style="margin-left: 15px">
+<p>The latest stable release, by using the latest release the
+						information contained on the website will be relevant.</p>
+</div>
+<a name="N1003B"></a><a name="How+can+I+use+CVS+to+keep+up+to+date+with+the+latest+%0A%09%09%09%09%09%09codebase%3F"></a>
+<h4 class="faq">How can I use CVS to keep up to date with the latest 
+						codebase?</h4>
+<div align="right">
+<a href="#How+can+I+use+CVS+to+keep+up+to+date+with+the+latest+%0A%09%09%09%09%09%09codebase%3F-menu">^</a>
+</div>
+<div style="margin-left: 15px">
+<p>See the <a href="cvs.html">CVS</a> guide.</p>
+</div>
+<a name="N1004A"></a><a name="Technical"></a>
+<h3 class="boxed">Technical</h3>
+<a name="N10050"></a><a name="Does+It+Run+On+Linux%3F"></a>
+<h4 class="faq">Does It Run On Linux?</h4>
+<div align="right">
+<a href="#Does+It+Run+On+Linux%3F-menu">^</a>
+</div>
+<div style="margin-left: 15px">
+<p>Log4Delphi is generic enough to be compiled on Kylix. Although 
+						this has not yet been tested it should work without error.</p>
+</div>
+<a name="N1005A"></a><a name="What+is+the+MD5+file+in+the+file+releases%3F"></a>
+<h4 class="faq">What is the MD5 file in the file releases?</h4>
+<div align="right">
+<a href="#What+is+the+MD5+file+in+the+file+releases%3F-menu">^</a>
+</div>
+<div style="margin-left: 15px">
+<p>The MD5 file is a text file that contains an MD5 checksum
+						of the corresponding archive generated at the same time that the 
+						archive	was created. It is used to ensure the integrity of the
+						downloaded archive. For more information see the 
+						<a href="download.html">Download</a> page.</p>
+</div>
+<a name="N10069"></a><a name="Older+Versions"></a>
+<h3 class="boxed">Older Versions</h3>
+<a name="N1006F"></a><a name="How+can+I+upgrade+to+the+latest+version%3F"></a>
+<h4 class="faq">How can I upgrade to the latest version?</h4>
+<div align="right">
+<a href="#How+can+I+upgrade+to+the+latest+version%3F-menu">^</a>
+</div>
+<div style="margin-left: 15px">
+<p>It depends how you installed the previous version. If you 
+						installed the package it is recommended to first uninstall it 
+						before proceeding to install the new package. If, however, you 
+						simply copied the source code into your project's code base, 
+						then simply overwriting them with the newer source files should 
+						work. See the <a href="userguide.html">User Guide</a>
+						for specific instructions.</p>
+</div>
+<a name="N1007E"></a><a name="General"></a>
+<h3 class="boxed">General</h3>
+<a name="N10084"></a><a name="Where+are+the+log+files+to+find+more+infomation+about+%0A%09%09%09%09%09%09errors%3F"></a>
+<h4 class="faq">Where are the log files to find more infomation about 
+						errors?</h4>
+<div align="right">
+<a href="#Where+are+the+log+files+to+find+more+infomation+about+%0A%09%09%09%09%09%09errors%3F-menu">^</a>
+</div>
+<div style="margin-left: 15px">
+<p>Log4Delphi's internal logging will send log output to a file 
+						named <span class="codefrag">log4delphi.log</span> in the current directory of 
+						your application, this will typically be the directory from 
+						which your application gets run. You can control this feature
+						using the <span class="codefrag">log4delphi.debug</span> directive in a properties
+						configuration file. See the <a href="userguide.html">User Guide</a> 
+						for more information.</p>
+</div>
+<a name="N10098"></a><a name="How+can+I+help+or+contribute%3F"></a>
+<h4 class="faq">How can I help or contribute?</h4>
+<div align="right">
+<a href="#How+can+I+help+or+contribute%3F-menu">^</a>
+</div>
+<div style="margin-left: 15px">
+<p> Join one of the Log4Delphi project 
+						<a href="contact.html">mailing lists</a>  and tell us what 
+						you would like to see improved. We regard all feedback as 
+						valuable, particularly from newcomers&mdash;often, close proximity 
+						blinds software developers to faults that are obvious to everyone 
+						else. Don't be shy!</p>
+</div>
+<a name="N100A6"></a><a name="Why+create+new+logging+project+for+Delphi%3F+Analogous+project+Log4D+already+exists%3F"></a>
+<h4 class="faq">Why create new logging project for Delphi? Analogous project Log4D already exists?</h4>
+<div align="right">
+<a href="#Why+create+new+logging+project+for+Delphi%3F+Analogous+project+Log4D+already+exists%3F-menu">^</a>
+</div>
+<div style="margin-left: 15px">
+<p> Log4D last updated their CVS 16 Months ago, the project has had no recent
+						activity since then. They also have no file releases which means new users
+						would have to get source code from the CVS repository which is not good.
+					</p>
+<p>
+						Log4D is also a direct port of Log4J while Log4Delphi is loosely based on
+						Log4J which means that Log4Delphi does not have to follow what Log4J is
+						doing, we can deviate from log4j at any time, which is a good thing,
+						considering the numerous differences between Java and Delphi.</p>
+</div>
+</div>
+	
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Log4Delphi Project</div>
+<div id="feedback">
+    Send feedback about the website to:
+  <a id="feedbackto" href="mailto:tcmiller@users.sourceforge.net?subject=Log4Delphi-Feedback%C2%A0faq.html">tcmiller@users.sourceforge.net</a>
+</div>
+</div>
+</body>
+</html>

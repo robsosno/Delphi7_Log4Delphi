@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><!--
+   Copyright 2005-2006 Log4Delphi Project
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+  --><!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V1.2//EN" "http://apache.org/forrest/dtd/document-v12.dtd">
+<document> 
+    <header>
+        <title>Log4Delphi Coding Standards</title>
+    </header>
+    <body>
+        <section>
+            <title>Coding Standards Used By Log4Delphi Developers</title>
+&#9;&#9;&#9;<section>
+&#9;&#9;&#9;&#9;<title>Introduction</title>
+&#9;&#9;&#9;&#9;<p>This document describes a list of coding conventions that are 
+&#9;&#9;&#9;&#9;&#9;required for code submissions to the project. By default, the coding 
+&#9;&#9;&#9;&#9;&#9;conventions for most Open Source Projects should follow the existing 
+&#9;&#9;&#9;&#9;&#9;coding conventions in the code that you are working on. For example, 
+&#9;&#9;&#9;&#9;&#9;if the begin is on the same line as the if statement, then you should 
+&#9;&#9;&#9;&#9;&#9;write all your code to have that convention.</p>
+&#9;&#9;&#9;&#9;<p><strong>If you commit code that does not follow these conventions and 
+&#9;&#9;&#9;&#9;&#9;you are caught, you are responsible for fixing that code.</strong></p>
+&#9;&#9;&#9;</section>
+&#9;&#9;&#9;<section>
+&#9;&#9;&#9;&#9;<title>General Source Conventions</title>
+&#9;&#9;&#9;&#9;<section>
+&#9;&#9;&#9;&#9;&#9;<title>Indentation</title>
+&#9;&#9;&#9;&#9;&#9;<p>Indenting is three spaces per level. <strong>NO TAB</strong> 
+&#9;&#9;&#9;&#9;&#9;&#9;characters!</p>
+&#9;&#9;&#9;&#9;&#9;&#9;<p>The reserved words <code>unit, uses, type, interface, 
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;implementation, initialization and finalization</code> are
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;always flush with the left margin.</p>
+&#9;&#9;&#9;&#9;</section>
+&#9;&#9;&#9;&#9;<section>
+&#9;&#9;&#9;&#9;&#9;<title>Margins</title>
+&#9;&#9;&#9;&#9;&#9;<p>Margins are set at 80 characters. In general, no source code should
+&#9;&#9;&#9;&#9;&#9;&#9;exceed past this margin. Statements that are longer than 80
+&#9;&#9;&#9;&#9;&#9;&#9;characters should be wrapped at an operator, ie: parenthesis,
+&#9;&#9;&#9;&#9;&#9;&#9;commas, etc. If a statement is wrapped it should be indented
+&#9;&#9;&#9;&#9;&#9;&#9;to match the block it is in.</p>
+&#9;&#9;&#9;&#9;</section>
+&#9;&#9;&#9;&#9;<section>
+&#9;&#9;&#9;&#9;&#9;<title>Comments</title>
+&#9;&#9;&#9;&#9;&#9;<p>Comments should be made using <code>{</code> and <code>}</code>.
+&#9;&#9;&#9;&#9;&#9;&#9;Single line comments embedded within the code are fine if they
+&#9;&#9;&#9;&#9;&#9;&#9;are done with <code>//</code>. The <code>{* *}</code> comments
+&#9;&#9;&#9;&#9;&#9;&#9;should be avoided. Code should be commented using the 
+&#9;&#9;&#9;&#9;&#9;&#9;<link href="http://dephicodetodoc.sourceforge.net/">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;DelphiCodeToDoc</link> / Javadoc format so that the API can 
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;be produced from it.</p>
+&#9;&#9;&#9;&#9;</section>
+&#9;&#9;&#9;&#9;<section>
+&#9;&#9;&#9;&#9;&#9;<title>Conditional Defines</title>
+&#9;&#9;&#9;&#9;&#9;<p>Conditional defines are with <code>{ }</code> braces and in
+&#9;&#9;&#9;&#9;&#9;&#9;uppercase. Each define is named in its closing block to aid
+&#9;&#9;&#9;&#9;&#9;&#9;readability and they are indented as blocks.</p>
+&#9;&#9;&#9;&#9;&#9;<source xml:space="preserve"><![CDATA[
+if (true) then
+begin
+   {$IFDEF SOMEVAL}
+      // statements here
+   {$ELSE}
+      // statements here
+   {$ENDIF SOMEVAL}
+end;
+					]]></source>
+&#9;&#9;&#9;&#9;</section>
+&#9;&#9;&#9;&#9;<section>
+&#9;&#9;&#9;&#9;&#9;<title>Begin and End</title>
+&#9;&#9;&#9;&#9;&#9;<p>Begin and end occur on separate lines with an exception being made 
+&#9;&#9;&#9;&#9;&#9;&#9;for an else clause.</p>
+&#9;&#9;&#9;&#9;&#9;<source xml:space="preserve"><![CDATA[
+if (x = 2) then
+begin
+   y := 0;
+end else begin
+   y := x;
+end;
+					]]></source>
+&#9;&#9;&#9;&#9;</section>&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+&#9;&#9;&#9;</section>
+&#9;&#9;&#9;<section>
+&#9;&#9;&#9;&#9;<title>Object Pascal Conventions</title>
+&#9;&#9;&#9;&#9;<section>
+&#9;&#9;&#9;&#9;&#9;<title>Parenthesis</title>
+&#9;&#9;&#9;&#9;&#9;<p>White space is permitted but not required or enforced. Generally
+&#9;&#9;&#9;&#9;&#9;&#9;there is no space between an opening parenthesis and the next
+&#9;&#9;&#9;&#9;&#9;&#9;character as well as between a character and a closing 
+&#9;&#9;&#9;&#9;&#9;&#9;parenthesis.</p>
+&#9;&#9;&#9;&#9;&#9;<source xml:space="preserve"><![CDATA[
+if (x = 2) then  // PREFERED way of doing it
+   // ...
+   
+if ( x = 2 ) then  // ACCEPTABLE way of doing it
+   // ...
+					]]></source>
+&#9;&#9;&#9;&#9;</section>
+&#9;&#9;&#9;&#9;<section>
+&#9;&#9;&#9;&#9;&#9;<title>Reserved Words</title>
+&#9;&#9;&#9;&#9;&#9;<p>Reserved words and key words are always in lower case.</p>
+&#9;&#9;&#9;&#9;</section>
+&#9;&#9;&#9;&#9;<section>
+&#9;&#9;&#9;&#9;&#9;<title>Case Statements</title>
+&#9;&#9;&#9;&#9;&#9;<p>Case statements follow a strict indenting pattern:</p>
+&#9;&#9;&#9;&#9;&#9;<source xml:space="preserve"><![CDATA[
+case x of 
+   0 : begin
+      // statements
+   end;
+   // ...
+   n : begin
+      // statements   
+   end;
+else {CASE}
+   // ...
+end;
+					]]></source>
+&#9;&#9;&#9;&#9;</section>
+&#9;&#9;&#9;&#9;<section>
+&#9;&#9;&#9;&#9;&#9;<title>Classes</title>
+&#9;&#9;&#9;&#9;&#9;<p>All classes are named with a capital T followed by the class's
+&#9;&#9;&#9;&#9;&#9;&#9;name in sentence case. All classes should descend (subclass)
+&#9;&#9;&#9;&#9;&#9;&#9;from <code>TObject</code>, so that they may be added as
+&#9;&#9;&#9;&#9;&#9;&#9;objects to <code>TStrings</code> instances. The keywords
+&#9;&#9;&#9;&#9;&#9;&#9;<code>public, private, protected, published</code> are indented
+&#9;&#9;&#9;&#9;&#9;&#9;with the class and occur in the order: private, protected, 
+&#9;&#9;&#9;&#9;&#9;&#9;public and published.</p>
+&#9;&#9;&#9;&#9;&#9;<source xml:space="preserve"><![CDATA[
+   TFileAppender = class (TObject)
+   private
+      // statements   
+   protected
+      // statements
+   public
+      // statements
+   end;
+					]]></source>
+&#9;&#9;&#9;&#9;</section>&#9;&#9;&#9;&#9;
+&#9;&#9;&#9;</section>
+&#9;&#9;&#9;<section>
+&#9;&#9;&#9;&#9;<title>File Conventions</title>
+&#9;&#9;&#9;&#9;<section>
+&#9;&#9;&#9;&#9;&#9;<title>Units</title>
+&#9;&#9;&#9;&#9;&#9;<p>Each unit is declared in its own file with the file name
+&#9;&#9;&#9;&#9;&#9;&#9;the name of the unit with a <code>Unit.pas</code> suffix.</p>
+&#9;&#9;&#9;&#9;&#9;<p>Only one class may be defined per unit, per file. The Unit name
+&#9;&#9;&#9;&#9;&#9;&#9;will be the class name with the <code>Unit</code> suffix.</p>
+&#9;&#9;&#9;&#9;</section>
+&#9;&#9;&#9;&#9;<section>
+&#9;&#9;&#9;&#9;&#9;<title>File Header</title>
+&#9;&#9;&#9;&#9;&#9;<p>Each source file must contain the header:</p>
+&#9;&#9;&#9;&#9;&#9;<source xml:space="preserve"><![CDATA[
+{
+   Copyright 2005-2006 Log4Delphi Project
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+}
+					]]></source>
+&#9;&#9;&#9;&#9;</section>
+&#9;&#9;&#9;</section>
+&#9;&#9;&#9;<section>
+&#9;&#9;&#9;&#9;<title/>
+&#9;&#9;&#9;</section>
+&#9;&#9;</section>
+&#9;&#9;<section>
+&#9;&#9;&#9;<title>Other Guidelines</title>
+&#9;&#9;&#9;<p>1. Destructors of a class should only free the objects within that class
+&#9;&#9;&#9;&#9;and call the super class's destructor to free those objects. Abstract
+&#9;&#9;&#9;&#9;classes that define objects on the heap should include destructors.</p>
+&#9;&#9;&#9;<p>2. In general, the caller is responsible for freeing memory. Objects
+&#9;&#9;&#9;&#9;passed as parameters to a procedure or function are not freed by
+&#9;&#9;&#9;&#9;that function but shouuld be freed by that function's caller.</p>
+&#9;&#9;</section>
+    </body>
+    <footer>
+    &#9;<legal>Copyright 2005-2006 Log4Delphi Project. All Rights Reserved.</legal>
+    </footer>
+</document>

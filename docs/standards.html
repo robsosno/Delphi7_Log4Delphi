@@ -1,0 +1,369 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.7">
+<meta name="Forrest-skin-name" content="pelt">
+<title>Log4Delphi Coding Standards</title>
+<link type="text/css" href="skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="skin/print.css" rel="stylesheet">
+<link type="text/css" href="skin/profile.css" rel="stylesheet">
+<script src="skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="">
+</head>
+<body onload="init()">
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<div class="breadtrail">
+<a href="http://www.sourceforge.net/">SourceForge</a> &gt; <a href="http://log4delphi.sourceforge.net/">Log4Delphi</a><script src="skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<div class="header">
+<div class="grouplogo">
+<a href=""></a>
+</div>
+<div class="projectlogo">
+<a href="http://log4delphi.sourceforge.net/"><img class="logoImage" alt="Log4Delphi" src="images/logo.gif" title="Log4Delphi Logging Suite for Borland Delphi"></a>
+</div>
+<div class="searchbox">
+<form action="http://www.google.com/search" method="get" class="roundtopsmall">
+<input value="http://log4delphi.sourceforge.net" name="sitesearch" type="hidden"><input onFocus="getBlank (this, 'Search the site with google');" size="25" name="q" id="query" type="text" value="Search the site with google">&nbsp; 
+                    <input attr="value" name="Search" value="Search" type="submit">
+</form>
+</div>
+<ul id="tabs">
+<li>
+<a class="base-not-selected" href="index.html">Log4Delphi</a>
+</li>
+<li>
+<a class="base-not-selected" href="quickstart.html">Quick Start</a>
+</li>
+<li>
+<a class="base-not-selected" href="overview.html">Documentation</a>
+</li>
+<li class="current">
+<a class="base-selected" href="developerguide.html">Contributing</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<div id="level2tabs"></div>
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<div id="menu">
+<div onclick="SwitchMenu('menu_selected_1.1', 'skin/')" id="menu_selected_1.1Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">Getting Involved</div>
+<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="developerguide.html">Guide</a>
+</div>
+<div class="menuitem">
+<a href="design.html" title="Log4 Delphi Design Overview">Design</a>
+</div>
+<div class="menuitem">
+<a href="releases.html" title="Log4 Delphi Release Plan">Release Plan</a>
+</div>
+<div class="menuitem">
+<a href="contact.html" title="Contact Log4Delphi">Contact</a>
+</div>
+<div class="menuitem">
+<a href="todo.html" title="Still to do">To Do</a>
+</div>
+<div class="menupage">
+<div class="menupagetitle">Coding Standards</div>
+</div>
+<div class="menuitem">
+<a href="cvs.html" title="Log4Delphi CVS Repository">CVS Repo</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<div id="credit2"></div>
+</div>
+<div id="content">
+<script language="Javascript" type="text/javascript">
+function printit() {
+  if (window.print) {
+    window.focus();
+    window.print();
+  }
+}
+        </script><script language="Javascript" type="text/javascript">
+var NS = (navigator.appName == "Netscape");
+var VERSION = parseInt(navigator.appVersion);
+if (VERSION > 3) {
+  document.write('<div title="Print this Page" class="printlink">');
+  document.write('  <a class="dida" href="javascript:printit()">');
+  document.write('    <img alt="print - icon" src="skin/images/printer.gif" class="skin">');
+  document.write('    <br>');
+  document.write('  PRINT</a>');
+  document.write('</div>');
+}
+        </script>
+<div title="raw XML" class="xmllink">
+<a class="dida" href="standards.xml"><img alt="XML - icon" src="skin/images/xmldoc.gif" class="skin"><br>
+        XML</a>
+</div>
+<div title="Portable Document Format" class="pdflink">
+<a class="dida" href="standards.pdf"><img alt="PDF -icon" src="skin/images/pdfdoc.gif" class="skin"><br>
+        PDF</a>
+</div>
+<h1>Log4Delphi Coding Standards</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#Coding+Standards+Used+By+Log4Delphi+Developers">Coding Standards Used By Log4Delphi Developers</a>
+<ul class="minitoc">
+<li>
+<a href="#Introduction">Introduction</a>
+</li>
+<li>
+<a href="#General+Source+Conventions">General Source Conventions</a>
+<ul class="minitoc">
+<li>
+<a href="#Indentation">Indentation</a>
+</li>
+<li>
+<a href="#Margins">Margins</a>
+</li>
+<li>
+<a href="#Comments">Comments</a>
+</li>
+<li>
+<a href="#Conditional+Defines">Conditional Defines</a>
+</li>
+<li>
+<a href="#Begin+and+End">Begin and End</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Object+Pascal+Conventions">Object Pascal Conventions</a>
+<ul class="minitoc">
+<li>
+<a href="#Parenthesis">Parenthesis</a>
+</li>
+<li>
+<a href="#Reserved+Words">Reserved Words</a>
+</li>
+<li>
+<a href="#Case+Statements">Case Statements</a>
+</li>
+<li>
+<a href="#Classes">Classes</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#File+Conventions">File Conventions</a>
+<ul class="minitoc">
+<li>
+<a href="#Units">Units</a>
+</li>
+<li>
+<a href="#File+Header">File Header</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Other+Guidelines">Other Guidelines</a>
+</li>
+</ul>
+</div>
+        
+<a name="N1000D"></a><a name="Coding+Standards+Used+By+Log4Delphi+Developers"></a>
+<h2 class="boxed">Coding Standards Used By Log4Delphi Developers</h2>
+<div class="section">
+<a name="N10013"></a><a name="Introduction"></a>
+<h3 class="boxed">Introduction</h3>
+<p>This document describes a list of coding conventions that are 
+					required for code submissions to the project. By default, the coding 
+					conventions for most Open Source Projects should follow the existing 
+					coding conventions in the code that you are working on. For example, 
+					if the begin is on the same line as the if statement, then you should 
+					write all your code to have that convention.</p>
+<p>
+<strong>If you commit code that does not follow these conventions and 
+					you are caught, you are responsible for fixing that code.</strong>
+</p>
+<a name="N10021"></a><a name="General+Source+Conventions"></a>
+<h3 class="boxed">General Source Conventions</h3>
+<a name="N10027"></a><a name="Indentation"></a>
+<h4>Indentation</h4>
+<p>Indenting is three spaces per level. <strong>NO TAB</strong> 
+						characters!</p>
+<p>The reserved words <span class="codefrag">unit, uses, type, interface, 
+							implementation, initialization and finalization</span> are
+							always flush with the left margin.</p>
+<a name="N1003A"></a><a name="Margins"></a>
+<h4>Margins</h4>
+<p>Margins are set at 80 characters. In general, no source code should
+						exceed past this margin. Statements that are longer than 80
+						characters should be wrapped at an operator, ie: parenthesis,
+						commas, etc. If a statement is wrapped it should be indented
+						to match the block it is in.</p>
+<a name="N10044"></a><a name="Comments"></a>
+<h4>Comments</h4>
+<p>Comments should be made using <span class="codefrag">{</span> and <span class="codefrag">}</span>.
+						Single line comments embedded within the code are fine if they
+						are done with <span class="codefrag">//</span>. The <span class="codefrag">{* *}</span> comments
+						should be avoided. Code should be commented using the 
+						<a href="http://dephicodetodoc.sourceforge.net/">
+							DelphiCodeToDoc</a> / Javadoc format so that the API can 
+							be produced from it.</p>
+<a name="N1005E"></a><a name="Conditional+Defines"></a>
+<h4>Conditional Defines</h4>
+<p>Conditional defines are with <span class="codefrag">{ }</span> braces and in
+						uppercase. Each define is named in its closing block to aid
+						readability and they are indented as blocks.</p>
+<pre class="code">
+if (true) then
+begin
+   {$IFDEF SOMEVAL}
+      // statements here
+   {$ELSE}
+      // statements here
+   {$ENDIF SOMEVAL}
+end;
+					</pre>
+<a name="N1006F"></a><a name="Begin+and+End"></a>
+<h4>Begin and End</h4>
+<p>Begin and end occur on separate lines with an exception being made 
+						for an else clause.</p>
+<pre class="code">
+if (x = 2) then
+begin
+   y := 0;
+end else begin
+   y := x;
+end;
+					</pre>
+<a name="N1007E"></a><a name="Object+Pascal+Conventions"></a>
+<h3 class="boxed">Object Pascal Conventions</h3>
+<a name="N10084"></a><a name="Parenthesis"></a>
+<h4>Parenthesis</h4>
+<p>White space is permitted but not required or enforced. Generally
+						there is no space between an opening parenthesis and the next
+						character as well as between a character and a closing 
+						parenthesis.</p>
+<pre class="code">
+if (x = 2) then  // PREFERED way of doing it
+   // ...
+   
+if ( x = 2 ) then  // ACCEPTABLE way of doing it
+   // ...
+					</pre>
+<a name="N10092"></a><a name="Reserved+Words"></a>
+<h4>Reserved Words</h4>
+<p>Reserved words and key words are always in lower case.</p>
+<a name="N1009C"></a><a name="Case+Statements"></a>
+<h4>Case Statements</h4>
+<p>Case statements follow a strict indenting pattern:</p>
+<pre class="code">
+case x of 
+   0 : begin
+      // statements
+   end;
+   // ...
+   n : begin
+      // statements   
+   end;
+else {CASE}
+   // ...
+end;
+					</pre>
+<a name="N100AA"></a><a name="Classes"></a>
+<h4>Classes</h4>
+<p>All classes are named with a capital T followed by the class's
+						name in sentence case. All classes should descend (subclass)
+						from <span class="codefrag">TObject</span>, so that they may be added as
+						objects to <span class="codefrag">TStrings</span> instances. The keywords
+						<span class="codefrag">public, private, protected, published</span> are indented
+						with the class and occur in the order: private, protected, 
+						public and published.</p>
+<pre class="code">
+   TFileAppender = class (TObject)
+   private
+      // statements   
+   protected
+      // statements
+   public
+      // statements
+   end;
+					</pre>
+<a name="N100C2"></a><a name="File+Conventions"></a>
+<h3 class="boxed">File Conventions</h3>
+<a name="N100C8"></a><a name="Units"></a>
+<h4>Units</h4>
+<p>Each unit is declared in its own file with the file name
+						the name of the unit with a <span class="codefrag">Unit.pas</span> suffix.</p>
+<p>Only one class may be defined per unit, per file. The Unit name
+						will be the class name with the <span class="codefrag">Unit</span> suffix.</p>
+<a name="N100DB"></a><a name="File+Header"></a>
+<h4>File Header</h4>
+<p>Each source file must contain the header:</p>
+<pre class="code">
+{
+   Copyright 2005-2006 Log4Delphi Project
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+}
+					</pre>
+<a name="N100EA"></a>
+<h3 class="boxed"></h3>
+</div>
+		
+<a name="N100F1"></a><a name="Other+Guidelines"></a>
+<h2 class="boxed">Other Guidelines</h2>
+<div class="section">
+<p>1. Destructors of a class should only free the objects within that class
+				and call the super class's destructor to free those objects. Abstract
+				classes that define objects on the heap should include destructors.</p>
+<p>2. In general, the caller is responsible for freeing memory. Objects
+				passed as parameters to a procedure or function are not freed by
+				that function but shouuld be freed by that function's caller.</p>
+</div>
+    
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Log4Delphi Project</div>
+<div id="feedback">
+    Send feedback about the website to:
+  <a id="feedbackto" href="mailto:tcmiller@users.sourceforge.net?subject=Log4Delphi-Feedback%C2%A0standards.html">tcmiller@users.sourceforge.net</a>
+</div>
+</div>
+</body>
+</html>

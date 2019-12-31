@@ -1,0 +1,303 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.7">
+<meta name="Forrest-skin-name" content="pelt">
+<title>Log4Delphi Tutorial</title>
+<link type="text/css" href="skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="skin/print.css" rel="stylesheet">
+<link type="text/css" href="skin/profile.css" rel="stylesheet">
+<script src="skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="">
+</head>
+<body onload="init()">
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<div class="breadtrail">
+<a href="http://www.sourceforge.net/">SourceForge</a> &gt; <a href="http://log4delphi.sourceforge.net/">Log4Delphi</a><script src="skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<div class="header">
+<div class="grouplogo">
+<a href=""></a>
+</div>
+<div class="projectlogo">
+<a href="http://log4delphi.sourceforge.net/"><img class="logoImage" alt="Log4Delphi" src="images/logo.gif" title="Log4Delphi Logging Suite for Borland Delphi"></a>
+</div>
+<div class="searchbox">
+<form action="http://www.google.com/search" method="get" class="roundtopsmall">
+<input value="http://log4delphi.sourceforge.net" name="sitesearch" type="hidden"><input onFocus="getBlank (this, 'Search the site with google');" size="25" name="q" id="query" type="text" value="Search the site with google">&nbsp; 
+                    <input attr="value" name="Search" value="Search" type="submit">
+</form>
+</div>
+<ul id="tabs">
+<li>
+<a class="base-not-selected" href="index.html">Log4Delphi</a>
+</li>
+<li>
+<a class="base-not-selected" href="quickstart.html">Quick Start</a>
+</li>
+<li class="current">
+<a class="base-selected" href="overview.html">Documentation</a>
+</li>
+<li>
+<a class="base-not-selected" href="developerguide.html">Contributing</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<div id="level2tabs"></div>
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<div id="menu">
+<div onclick="SwitchMenu('menu_selected_1.1', 'skin/')" id="menu_selected_1.1Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">Documentation</div>
+<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="overview.html" title="Documentation Overview">Overview</a>
+</div>
+<div class="menuitem">
+<a href="getstarted.html" title="Getting Started With Log4Delphi">Get Started</a>
+</div>
+<div class="menupage">
+<div class="menupagetitle">Tutorial</div>
+</div>
+<div class="menuitem">
+<a href="userguide.html" title="Log4Delphi User Guide">User Guide</a>
+</div>
+<div class="menuitem">
+<a href="faq.html" title="Frequently Asked Questions about Log4Delphi">FAQ</a>
+</div>
+<div class="menuitem">
+<a href="http://log4delphi.sourceforge.net/api/html/Log4Delphi.htm" title="Log4Delphi API">API</a>
+</div>
+<div class="menuitem">
+<a href="troubleshooting.html" title="Troubleshooting Log4Delphi">Troubleshooting</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2', 'skin/')" id="menu_1.2Title" class="menutitle">How-To</div>
+<div id="menu_1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="howto-pkg.html" title="How-To Create A package">Create A Package</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<div id="credit2"></div>
+</div>
+<div id="content">
+<script language="Javascript" type="text/javascript">
+function printit() {
+  if (window.print) {
+    window.focus();
+    window.print();
+  }
+}
+        </script><script language="Javascript" type="text/javascript">
+var NS = (navigator.appName == "Netscape");
+var VERSION = parseInt(navigator.appVersion);
+if (VERSION > 3) {
+  document.write('<div title="Print this Page" class="printlink">');
+  document.write('  <a class="dida" href="javascript:printit()">');
+  document.write('    <img alt="print - icon" src="skin/images/printer.gif" class="skin">');
+  document.write('    <br>');
+  document.write('  PRINT</a>');
+  document.write('</div>');
+}
+        </script>
+<div title="raw XML" class="xmllink">
+<a class="dida" href="tutorial.xml"><img alt="XML - icon" src="skin/images/xmldoc.gif" class="skin"><br>
+        XML</a>
+</div>
+<div title="Portable Document Format" class="pdflink">
+<a class="dida" href="tutorial.pdf"><img alt="PDF -icon" src="skin/images/pdfdoc.gif" class="skin"><br>
+        PDF</a>
+</div>
+<h1>Log4Delphi Tutorial</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#About+This+Tutorial">About This Tutorial</a>
+</li>
+<li>
+<a href="#Step+1%3A+Obtaining+a+Source+Distribution">Step 1: Obtaining a Source Distribution</a>
+<ul class="minitoc">
+<li>
+<a href="#1.1+Download+the+Source+Distribution">1.1 Download the Source Distribution</a>
+</li>
+<li>
+<a href="#1.2+Extract+The+Archive">1.2 Extract The Archive</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Step+2%3A+Creating+a+New+Project">Step 2: Creating a New Project</a>
+<ul class="minitoc">
+<li>
+<a href="#2.1+Launch+Delphi+And+Save+Project">2.1 Launch Delphi And Save Project</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Step+3%3A+Perfromming+Logging">Step 3: Perfromming Logging</a>
+</li>
+<li>
+<a href="#Step+4%3A+Evaluating+The+Log+File">Step 4: Evaluating The Log File</a>
+</li>
+<li>
+<a href="#Source+Code">Source Code</a>
+</li>
+</ul>
+</div>
+		
+<a name="N1000D"></a><a name="About+This+Tutorial"></a>
+<h2 class="boxed">About This Tutorial</h2>
+<div class="section">
+<p>This tutorial provides a step by step guide to using Log4Delphi. 
+				It does not attempt to explain or provide an in depth discussion on
+				any details. If you want more detail check the <a href="userguide.html">User Guide</a>.</p>
+</div>
+        
+<a name="N1001B"></a><a name="Step+1%3A+Obtaining+a+Source+Distribution"></a>
+<h2 class="boxed">Step 1: Obtaining a Source Distribution</h2>
+<div class="section">
+<a name="N10021"></a><a name="1.1+Download+the+Source+Distribution"></a>
+<h3 class="boxed">1.1 Download the Source Distribution</h3>
+<p>Download a source distribution of Log4Delphi <span class="codefrag">log4delphi-version.archive</span> from <a href="https://sourceforge.net/project/showfiles.php?group_id=145326">here</a>. I used <span class="codefrag">log4delphi-0.4-src.tar.gz</span> for this tutorial.</p>
+<a name="N10035"></a><a name="1.2+Extract+The+Archive"></a>
+<h3 class="boxed">1.2 Extract The Archive</h3>
+<p>Extract the archive using the tool of your choice to the location of your choice. I used Zipgenius to extract it to my <span class="codefrag">F:\</span> drive. This resulted in a folder named <span class="codefrag">F:\log4delphi-0.4</span>
+</p>
+</div>
+        
+<a name="N10045"></a><a name="Step+2%3A+Creating+a+New+Project"></a>
+<h2 class="boxed">Step 2: Creating a New Project</h2>
+<div class="section">
+<a name="N1004B"></a><a name="2.1+Launch+Delphi+And+Save+Project"></a>
+<h3 class="boxed">2.1 Launch Delphi And Save Project</h3>
+<ol>
+					
+<li>Create a folder named <span class="codefrag">tutorial</span> in the location of your choice. I used my <span class="codefrag">F:\</span> drive again.</li>
+					
+<li>Launch Delphi and save the project in the <span class="codefrag">tutorial</span> folder you created.</li>
+					
+<li>Now add a button to the form and label its caption "Click Me!".<br>
+<img alt="Form with Button" src="images/tutorial1.jpg"></li>
+					
+<li>Copy all the Pascal source files from the <span class="codefrag">log4delphi-version/src/delphi</span> folder, including the <span class="codefrag">util</span> folder and its contents into the tutorial folder, excluding the <span class="codefrag">TConsoleUnit.pas</span> file.</li>
+					
+<li>Now add the source files to your project by selecting <span class="codefrag">Project &gt; Add To Project</span> from the main menu in Delphi.</li>
+					
+<li>Select the source files and click the Open button.<br>
+<img alt="Adding the source code." src="images/tutorial2.jpg"></li>
+					
+<li>Now copy the file named <span class="codefrag">log4delphi.properties</span> in the <span class="codefrag">log4delphi/example</span> folder to your tutorial folder.</li>
+				
+</ol>
+</div>
+        
+<a name="N1008E"></a><a name="Step+3%3A+Perfromming+Logging"></a>
+<h2 class="boxed">Step 3: Perfromming Logging</h2>
+<div class="section">
+<ol>
+				
+<li>Select <span class="codefrag">Project &gt; View Source</span> from the main menu in Delphi.</li>
+				
+<li>Add the line <span class="codefrag">TConfiguratorUnit.doPropertiesConfiguration('log4delphi.properties');</span> beneath the line that reads <span class="codefrag">Application.Initialize;</span>.</li>
+				
+<li>Now add an <span class="codefrag">onClick</span> event handler to the button. In the handler add the line <span class="codefrag">TLogger.getInstance.debug('Button Clicked!');</span>.</li>
+				
+<li>Finally add an <span class="codefrag">onDestroy</span> handler to the main form. Add the following code to the handler: <span class="codefrag">TLogger.freeInstances;</span>.</li>
+			
+</ol>
+</div>
+        
+<a name="N100B9"></a><a name="Step+4%3A+Evaluating+The+Log+File"></a>
+<h2 class="boxed">Step 4: Evaluating The Log File</h2>
+<div class="section">
+<ol>
+				
+<li>Compile and run the application. Click the button three times and then exit the application.</li>
+				
+<li>You should have a log file in the tutorial folder named <span class="codefrag">app.log</span> with the following content<br>DEBUG - Button Clicked<br>DEBUG - Button Clicked<br>DEBUG - Button Clicked</li>
+			
+</ol>
+</div>
+		
+<a name="N100D2"></a><a name="Source+Code"></a>
+<h2 class="boxed">Source Code</h2>
+<div class="section">
+<pre class="code">
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Button1: TButton;
+    procedure Button1Click(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+uses
+   TLoggerUnit;
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+   TLogger.getInstance.debug('Button Clicked!');
+end;
+
+procedure TForm1.FormDestroy(Sender: TObject);
+begin
+   TLogger.freeInstances;
+end;
+
+end.
+
+			</pre>
+</div>					
+    
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Log4Delphi Project</div>
+<div id="feedback">
+    Send feedback about the website to:
+  <a id="feedbackto" href="mailto:tcmiller@users.sourceforge.net?subject=Log4Delphi-Feedback%C2%A0tutorial.html">tcmiller@users.sourceforge.net</a>
+</div>
+</div>
+</body>
+</html>

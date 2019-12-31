@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Log4Delphi - Log4Delphi Logging Suite</title>
+<meta http-equiv="Content-Type" content="text/html">
+<link rel="stylesheet" href="..\..\DelphiCodeToDoc.css" type="text/css">
+</head>
+<body bgcolor="#FFFFFF">
+
+<table width="100%" border="0" cellspacing="0" bgcolor="#99CCFF">
+  <tr>
+    <td class="Generated"><b>Log4Delphi</b></td>
+    <td class="Normal">
+      <div align="center">Content</div>
+    </td>
+    <td class="Normal">
+      <div align="center"><a href="../../Log4Delphi.htm">Index</a></div>
+    </td>
+    <td class="Normal">
+      <div align="center">Previous</div>
+    </td>
+    <td class="Normal">
+      <div align="center">Next</div>
+    </td>
+  </tr>
+</table><br>
+
+<span class="SectionName">Class</span><br>
+<table width="95%" border="0" cellspacing="0">
+  <tr>
+    <td width="10">&nbsp;</td>
+    <td class="Generated">TProperties</td>
+  </tr>
+</table>
+<br>
+
+<span class="SectionName">Class Hierarchy</span><br>
+<table width="95%" border="0" cellspacing="0">
+  <tr>
+    <td width="10">&nbsp;</td>
+    <td class="Generated">TObject</td>
+  </tr>
+</table>
+<br>
+
+<span class="SectionName">Related Unit</span><br>
+<table width="95%" border="0" cellspacing="0">
+  <tr>
+    <td width="10">&nbsp;</td>
+    <td class="Generated">TPropertiesUnit</td>
+  </tr>
+</table>
+<br>
+
+<span class="SectionName">Description</span><br>
+<table width="95%" border="0" cellspacing="0">
+
+  <tr> 
+    <td width="10">&nbsp;</td>
+    <td bgcolor="#FFFFCC" class="Generated"> 
+      <p>TProperties represents a persistent set of properties that can be saved to<BR>a TStream or loaded from a TStream. A property is simply a key=value<BR>mapping between two strings, one the key and the other the value.<BR><p><BR>Properties are saved to stream as key=value, one such pair per line, and<BR>when loaded from a stream, the same format is expected. Keys can be of the<BR>form "base.name" thus allowing a subset of all properties with the same<BR>base to be found.</p>
+    </td>
+  </tr>
+
+</table><br>
+
+<span class="SectionName">Members</span><br>
+<table width="100%" border="0" cellspacing="0">
+  <tr>
+    <td width="10">&nbsp;</td>
+    <td>
+<span class="SectionName">Fields</span><br>
+<table width="95%" border="0" cellspacing="0">
+  <tr> 
+    <td width="10">&nbsp;</td>
+    <td> 
+      <table width="100%" border="1" cellspacing="0" class="IndexName">
+        <tr bgcolor="#FFFFFF"> 
+          <td class="IndexName" width="33%">Field</td>
+          <td class="IndexName">Description</td>
+        </tr>
+
+        <tr bgcolor="#FFFFFF"> 
+          <td class="Generated" width="33%"><a href="TProperties/FValues.htm">FValues</a>  (-)</td>
+          <td class="Generated">#No TAG found in source code#</td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table><br>
+
+<span class="SectionName">Methods</span><br>
+<table width="95%" border="0" cellspacing="0">
+  <tr> 
+    <td width="10">&nbsp;</td>
+    <td> 
+      <table width="100%" border="1" cellspacing="0" class="IndexName">
+        <tr bgcolor="#FFFFFF"> 
+          <td class="IndexName" width="33%">Method</td>
+          <td class="IndexName">Description</td>
+        </tr>
+
+        <tr bgcolor="#FFFFFF"> 
+          <td class="Generated" width="33%"><a href="TProperties/Clear_360F.htm">Clear</a>  (+)</td>
+          <td class="Generated">Clear the properties set.</td>
+        </tr>
+
+        <tr bgcolor="#FFFFFF"> 
+          <td class="Generated" width="33%"><a href="TProperties/Create_D39C.htm">Create</a>  (+)</td>
+          <td class="Generated">Instantiate a Properties instance with an empty properties set.</td>
+        </tr>
+
+        <tr bgcolor="#FFFFFF"> 
+          <td class="Generated" width="33%"><a href="TProperties/Destroy_3534.htm">Destroy</a>  (+)</td>
+          <td class="Generated">Destruct the instance by freeing the internal properties set.</td>
+        </tr>
+
+        <tr bgcolor="#FFFFFF"> 
+          <td class="Generated" width="33%"><a href="TProperties/GetProperty_585B.htm">GetProperty</a>  (+)</td>
+          <td class="Generated">Return a property matching the given key. If no such key exists in the</td>
+        </tr>
+
+        <tr bgcolor="#FFFFFF"> 
+          <td class="Generated" width="33%"><a href="TProperties/GetProperty_0142.htm">GetProperty</a>  (+)</td>
+          <td class="Generated">Return a property matching the given key. If no such key exists in the</td>
+        </tr>
+
+        <tr bgcolor="#FFFFFF"> 
+          <td class="Generated" width="33%"><a href="TProperties/GetPropertyNames_5AB5.htm">GetPropertyNames</a>  (+)</td>
+          <td class="Generated">Return a list of all the property keys in the set. This can be used for</td>
+        </tr>
+
+        <tr bgcolor="#FFFFFF"> 
+          <td class="Generated" width="33%"><a href="TProperties/Load_29FF.htm">Load</a>  (+)</td>
+          <td class="Generated">Load a properties set from a stream. This can be any class that subclasses</td>
+        </tr>
+
+        <tr bgcolor="#FFFFFF"> 
+          <td class="Generated" width="33%"><a href="TProperties/RemoveProperty_6328.htm">RemoveProperty</a>  (+)</td>
+          <td class="Generated">Remove the value that maps to the given key. Does nothing if the key is</td>
+        </tr>
+
+        <tr bgcolor="#FFFFFF"> 
+          <td class="Generated" width="33%"><a href="TProperties/Save_A0DE.htm">Save</a>  (+)</td>
+          <td class="Generated">Save the set of properties to a stream. This can be any class that</td>
+        </tr>
+
+        <tr bgcolor="#FFFFFF"> 
+          <td class="Generated" width="33%"><a href="TProperties/SetProperty_77B4.htm">SetProperty</a>  (+)</td>
+          <td class="Generated">Set a property in the set.</td>
+        </tr>
+
+        <tr bgcolor="#FFFFFF"> 
+          <td class="Generated" width="33%"><a href="TProperties/Subset_C2AE.htm">Subset</a>  (+)</td>
+          <td class="Generated">Return a subset of properties whose keys match a given base prefix. It is</td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table><br>
+
+<span class="SectionName">Properties</span><br>
+<table width="95%" border="0" cellspacing="0">
+  <tr> 
+    <td width="10">&nbsp;</td>
+    <td> 
+      <table width="100%" border="1" cellspacing="0" class="IndexName">
+        <tr bgcolor="#FFFFFF"> 
+          <td class="IndexName" width="33%">Property</td>
+          <td class="IndexName">Description</td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table><br>
+
+<span class="SectionName">Events</span><br>
+<table width="95%" border="0" cellspacing="0">
+  <tr> 
+    <td width="10">&nbsp;</td>
+    <td> 
+      <table width="100%" border="1" cellspacing="0" class="IndexName">
+        <tr bgcolor="#FFFFFF"> 
+          <td class="IndexName" width="33%">Event</td>
+          <td class="IndexName">Description</td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table><br>
+
+    </td>
+  </tr>
+</table><br>
+
+<span class="SectionName">Legend</span><br>
+<table width="95%" border="0" cellspacing="0">
+  <tr> 
+    <td width="10">&nbsp;</td>
+    <td> 
+      <table width="100%" border="1" cellspacing="0" class="IndexName">
+        <tr bgcolor="#FFFFFF"> 
+          <td class="IndexName" width="33%">Symbol</td>
+          <td class="IndexName">Visibility</td>
+        </tr>
+
+        <tr bgcolor="#FFFFFF"> 
+          <td class="Generated" width="33%">-</td>
+          <td class="Generated">Private</td>
+        </tr>
+
+        <tr bgcolor="#FFFFFF"> 
+          <td class="Generated" width="33%">#</td>
+          <td class="Generated">Protected</td>
+        </tr>
+
+        <tr bgcolor="#FFFFFF"> 
+          <td class="Generated" width="33%">+</td>
+          <td class="Generated">Public</td>
+        </tr>
+
+        <tr bgcolor="#FFFFFF"> 
+          <td class="Generated" width="33%">*</td>
+          <td class="Generated">Published</td>
+        </tr>
+
+        <tr bgcolor="#FFFFFF"> 
+          <td class="Generated" width="33%">A</td>
+          <td class="Generated">Automated</td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table><br>
+
+<table width="100%" border="0" cellspacing="0" bgcolor="#99CCFF">
+  <tr>
+    <td class="Generated"><b>Log4Delphi</b></td>
+    <td class="Normal">
+      <div align="center">Content</div>
+    </td>
+    <td class="Normal">
+      <div align="center"><a href="../../Log4Delphi.htm">Index</a></div>
+    </td>
+    <td class="Normal">
+      <div align="center">Previous</div>
+    </td>
+    <td class="Normal">
+      <div align="center">Next</div>
+    </td>
+  </tr>
+</table><br>
+
+<hr width="100%" align="left">
+<span class="Footer">Created with DelphiCodeToDoc. To obtain the latest revision,
+please see <a href="http://dephicodetodoc.sourceforge.net/"><b>http://dephicodetodoc.sourceforge.net/</b></a><br>
+Under GNU GPL licence. Copyright (c) 2003 - TridenT.</span><br>
+<p>&nbsp;</p>
+</body>
+</html>
+

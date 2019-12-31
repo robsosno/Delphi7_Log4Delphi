@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><!--
+   Copyright 2005-2006 Log4Delphi Project
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+  --><!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V1.2//EN" "http://apache.org/forrest/dtd/document-v12.dtd">
+<document> 
+    <header>
+        <title>Getting Started With Log4Delphi</title>
+    </header>
+    <body>
+&#9;&#9;<section>
+&#9;&#9;&#9;<title>About This Guide</title>
+&#9;&#9;&#9;<p>The Getting Started Guide is designed to explain the steps 
+&#9;&#9;&#9;&#9;necessary to quickly setup and use Log4Delphi in an application.
+&#9;&#9;&#9;&#9;As such, it does not go into much detail about the various
+&#9;&#9;&#9;&#9;options and uses.</p>
+&#9;&#9;</section>
+        <section>
+            <title>Configuring the Log4Delphi Package</title>
+&#9;&#9;&#9;<p>The first thing that needs to be done it to configure
+&#9;&#9;&#9;&#9;the Log4Delphi package. This is a simple matter of
+&#9;&#9;&#9;&#9;adding one line of code to your Application's code.</p>
+&#9;&#9;&#9;<p>You use the Configurator Unit to do a basic configuration,
+&#9;&#9;&#9;&#9;which will then initialize and configure the package. The 
+&#9;&#9;&#9;&#9;steps are:</p>
+&#9;&#9;&#9;<ol>
+&#9;&#9;&#9;&#9;<li>Launch Delphi and open your application.</li>
+&#9;&#9;&#9;&#9;<li>Select <code>Project &gt; View Source</code> from the 
+&#9;&#9;&#9;&#9;&#9;main menu.</li>
+&#9;&#9;&#9;&#9;<li>Add <code>TConfiguratorUnit.doBasicConfiguration;</code> just 
+&#9;&#9;&#9;&#9;&#9;after the <code>Application.Initialize;</code> line. You should
+&#9;&#9;&#9;&#9;&#9;have code that is similar to:
+&#9;&#9;&#9;&#9;&#9;<source xml:space="preserve"><![CDATA[
+  Application.Initialize;
+  TConfiguratorUnit.doBasicConfiguration;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;					
+					]]></source>&#9;&#9;&#9;&#9;&#9;
+&#9;&#9;&#9;&#9;</li>
+&#9;&#9;&#9;&#9;<li>Make sure that <code>TConfiguratorUnit</code> is added to the uses
+&#9;&#9;&#9;&#9;&#9;clause.</li>
+&#9;&#9;&#9;</ol>
+        </section>
+        <section>
+            <title>Configuring the Logger</title>
+&#9;&#9;&#9;<p>You can configure the logger to perform logging to a file and to log 
+&#9;&#9;&#9;&#9;specific event messages. The steps are:</p>
+&#9;&#9;&#9;<ol>
+&#9;&#9;&#9;&#9;<li>Retrieve the Logger instance using the <code>getInstance</code>
+&#9;&#9;&#9;&#9;&#9;class method: <code>logger := TLogger.getInstance;</code>.</li>
+&#9;&#9;&#9;&#9;<li>You can then set the level of the logger using: 
+&#9;&#9;&#9;&#9;&#9;<code>logger.setLevel(TLevelUnit.INFO);</code> .This is not 
+&#9;&#9;&#9;&#9;&#9;required since the default level is DEBUG. </li>
+&#9;&#9;&#9;&#9;<li>You would typically add an appender to the logger to log events with,
+&#9;&#9;&#9;&#9;&#9;we'll use a file appender: 
+&#9;&#9;&#9;&#9;&#9;<code>logger.addAppender(TFileAppender.Create('C:\test.log'));</code>
+&#9;&#9;&#9;&#9;</li>
+&#9;&#9;&#9;&#9;<li>That's all there is to configuring the logger. Just remember to include
+&#9;&#9;&#9;&#9;&#9;the appropriate units to your uses clause. As in the example below.</li>
+&#9;&#9;&#9;</ol>
+&#9;&#9;&#9;<source xml:space="preserve"><![CDATA[
+...
+uses TLoggerUnit, TLevelUnit, TFileAppenderUnit;
+...				
+var
+   logger : TLogger;
+begin
+   logger := TLogger.getInstance;
+   logger.setLevel(TLevelUnit.INFO);
+   logger.addAppender(TFileAppender.Create('C:\test.log'));			
+   ...
+			]]></source>
+        </section>
+        <section>
+            <title>Logging Messages</title>
+&#9;&#9;&#9;<p>Logging messages is simple once you have set up the logger. There are
+&#9;&#9;&#9;&#9;five types of messages that can be logged, FATAL, ERROR, WARN, INFO
+&#9;&#9;&#9;&#9;and DEBUG. This is done as follows:</p>
+&#9;&#9;&#9;<source xml:space="preserve"><![CDATA[
+   logger.debug('Debug message');
+   logger.info('Info message');
+   logger.warn('Warn message');
+   logger.error('Error message');
+   logger.fatal('Fatal message');
+			]]></source>
+        </section>
+        <section>
+            <title>Freeing the Logger Instance</title>
+&#9;&#9;&#9;<p>The last thing you'll need to do is free the logger instance when
+&#9;&#9;&#9;&#9;the application terminates. This will take care of freeing all
+&#9;&#9;&#9;&#9;resources used by the logging package. It is a good idea to
+&#9;&#9;&#9;&#9;put this in an application event handler or something similar.</p>
+&#9;&#9;&#9;<source xml:space="preserve"><![CDATA[
+...
+TLogger.freeInstances;
+...
+			]]></source>
+        </section>
+    </body>
+    <footer>
+    &#9;<legal>Copyright 2005-2006 Log4Delphi Project. All Rights Reserved.</legal>
+    </footer>
+</document>

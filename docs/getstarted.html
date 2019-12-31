@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.7">
+<meta name="Forrest-skin-name" content="pelt">
+<title>Getting Started With Log4Delphi</title>
+<link type="text/css" href="skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="skin/print.css" rel="stylesheet">
+<link type="text/css" href="skin/profile.css" rel="stylesheet">
+<script src="skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="">
+</head>
+<body onload="init()">
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<div class="breadtrail">
+<a href="http://www.sourceforge.net/">SourceForge</a> &gt; <a href="http://log4delphi.sourceforge.net/">Log4Delphi</a><script src="skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<div class="header">
+<div class="grouplogo">
+<a href=""></a>
+</div>
+<div class="projectlogo">
+<a href="http://log4delphi.sourceforge.net/"><img class="logoImage" alt="Log4Delphi" src="images/logo.gif" title="Log4Delphi Logging Suite for Borland Delphi"></a>
+</div>
+<div class="searchbox">
+<form action="http://www.google.com/search" method="get" class="roundtopsmall">
+<input value="http://log4delphi.sourceforge.net" name="sitesearch" type="hidden"><input onFocus="getBlank (this, 'Search the site with google');" size="25" name="q" id="query" type="text" value="Search the site with google">&nbsp; 
+                    <input attr="value" name="Search" value="Search" type="submit">
+</form>
+</div>
+<ul id="tabs">
+<li>
+<a class="base-not-selected" href="index.html">Log4Delphi</a>
+</li>
+<li>
+<a class="base-not-selected" href="quickstart.html">Quick Start</a>
+</li>
+<li class="current">
+<a class="base-selected" href="overview.html">Documentation</a>
+</li>
+<li>
+<a class="base-not-selected" href="developerguide.html">Contributing</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<div id="level2tabs"></div>
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<div id="menu">
+<div onclick="SwitchMenu('menu_selected_1.1', 'skin/')" id="menu_selected_1.1Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">Documentation</div>
+<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="overview.html" title="Documentation Overview">Overview</a>
+</div>
+<div class="menupage">
+<div class="menupagetitle">Get Started</div>
+</div>
+<div class="menuitem">
+<a href="tutorial.html" title="Log4Delphi Tutorial">Tutorial</a>
+</div>
+<div class="menuitem">
+<a href="userguide.html" title="Log4Delphi User Guide">User Guide</a>
+</div>
+<div class="menuitem">
+<a href="faq.html" title="Frequently Asked Questions about Log4Delphi">FAQ</a>
+</div>
+<div class="menuitem">
+<a href="http://log4delphi.sourceforge.net/api/html/Log4Delphi.htm" title="Log4Delphi API">API</a>
+</div>
+<div class="menuitem">
+<a href="troubleshooting.html" title="Troubleshooting Log4Delphi">Troubleshooting</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2', 'skin/')" id="menu_1.2Title" class="menutitle">How-To</div>
+<div id="menu_1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="howto-pkg.html" title="How-To Create A package">Create A Package</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<div id="credit2"></div>
+</div>
+<div id="content">
+<script language="Javascript" type="text/javascript">
+function printit() {
+  if (window.print) {
+    window.focus();
+    window.print();
+  }
+}
+        </script><script language="Javascript" type="text/javascript">
+var NS = (navigator.appName == "Netscape");
+var VERSION = parseInt(navigator.appVersion);
+if (VERSION > 3) {
+  document.write('<div title="Print this Page" class="printlink">');
+  document.write('  <a class="dida" href="javascript:printit()">');
+  document.write('    <img alt="print - icon" src="skin/images/printer.gif" class="skin">');
+  document.write('    <br>');
+  document.write('  PRINT</a>');
+  document.write('</div>');
+}
+        </script>
+<div title="raw XML" class="xmllink">
+<a class="dida" href="getstarted.xml"><img alt="XML - icon" src="skin/images/xmldoc.gif" class="skin"><br>
+        XML</a>
+</div>
+<div title="Portable Document Format" class="pdflink">
+<a class="dida" href="getstarted.pdf"><img alt="PDF -icon" src="skin/images/pdfdoc.gif" class="skin"><br>
+        PDF</a>
+</div>
+<h1>Getting Started With Log4Delphi</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#About+This+Guide">About This Guide</a>
+</li>
+<li>
+<a href="#Configuring+the+Log4Delphi+Package">Configuring the Log4Delphi Package</a>
+</li>
+<li>
+<a href="#Configuring+the+Logger">Configuring the Logger</a>
+</li>
+<li>
+<a href="#Logging+Messages">Logging Messages</a>
+</li>
+<li>
+<a href="#Freeing+the+Logger+Instance">Freeing the Logger Instance</a>
+</li>
+</ul>
+</div>
+		
+<a name="N1000D"></a><a name="About+This+Guide"></a>
+<h2 class="boxed">About This Guide</h2>
+<div class="section">
+<p>The Getting Started Guide is designed to explain the steps 
+				necessary to quickly setup and use Log4Delphi in an application.
+				As such, it does not go into much detail about the various
+				options and uses.</p>
+</div>
+        
+<a name="N10017"></a><a name="Configuring+the+Log4Delphi+Package"></a>
+<h2 class="boxed">Configuring the Log4Delphi Package</h2>
+<div class="section">
+<p>The first thing that needs to be done it to configure
+				the Log4Delphi package. This is a simple matter of
+				adding one line of code to your Application's code.</p>
+<p>You use the Configurator Unit to do a basic configuration,
+				which will then initialize and configure the package. The 
+				steps are:</p>
+<ol>
+				
+<li>Launch Delphi and open your application.</li>
+				
+<li>Select <span class="codefrag">Project &gt; View Source</span> from the 
+					main menu.</li>
+				
+<li>Add <span class="codefrag">TConfiguratorUnit.doBasicConfiguration;</span> just 
+					after the <span class="codefrag">Application.Initialize;</span> line. You should
+					have code that is similar to:
+					<pre class="code">
+  Application.Initialize;
+  TConfiguratorUnit.doBasicConfiguration;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;					
+					</pre>					
+				
+</li>
+				
+<li>Make sure that <span class="codefrag">TConfiguratorUnit</span> is added to the uses
+					clause.</li>
+			
+</ol>
+</div>
+        
+<a name="N10043"></a><a name="Configuring+the+Logger"></a>
+<h2 class="boxed">Configuring the Logger</h2>
+<div class="section">
+<p>You can configure the logger to perform logging to a file and to log 
+				specific event messages. The steps are:</p>
+<ol>
+				
+<li>Retrieve the Logger instance using the <span class="codefrag">getInstance</span>
+					class method: <span class="codefrag">logger := TLogger.getInstance;</span>.</li>
+				
+<li>You can then set the level of the logger using: 
+					<span class="codefrag">logger.setLevel(TLevelUnit.INFO);</span> .This is not 
+					required since the default level is DEBUG. </li>
+				
+<li>You would typically add an appender to the logger to log events with,
+					we'll use a file appender: 
+					<span class="codefrag">logger.addAppender(TFileAppender.Create('C:\test.log'));</span>
+				
+</li>
+				
+<li>That's all there is to configuring the logger. Just remember to include
+					the appropriate units to your uses clause. As in the example below.</li>
+			
+</ol>
+<pre class="code">
+...
+uses TLoggerUnit, TLevelUnit, TFileAppenderUnit;
+...				
+var
+   logger : TLogger;
+begin
+   logger := TLogger.getInstance;
+   logger.setLevel(TLevelUnit.INFO);
+   logger.addAppender(TFileAppender.Create('C:\test.log'));			
+   ...
+			</pre>
+</div>
+        
+<a name="N1006C"></a><a name="Logging+Messages"></a>
+<h2 class="boxed">Logging Messages</h2>
+<div class="section">
+<p>Logging messages is simple once you have set up the logger. There are
+				five types of messages that can be logged, FATAL, ERROR, WARN, INFO
+				and DEBUG. This is done as follows:</p>
+<pre class="code">
+   logger.debug('Debug message');
+   logger.info('Info message');
+   logger.warn('Warn message');
+   logger.error('Error message');
+   logger.fatal('Fatal message');
+			</pre>
+</div>
+        
+<a name="N1007A"></a><a name="Freeing+the+Logger+Instance"></a>
+<h2 class="boxed">Freeing the Logger Instance</h2>
+<div class="section">
+<p>The last thing you'll need to do is free the logger instance when
+				the application terminates. This will take care of freeing all
+				resources used by the logging package. It is a good idea to
+				put this in an application event handler or something similar.</p>
+<pre class="code">
+...
+TLogger.freeInstances;
+...
+			</pre>
+</div>
+    
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Log4Delphi Project</div>
+<div id="feedback">
+    Send feedback about the website to:
+  <a id="feedbackto" href="mailto:tcmiller@users.sourceforge.net?subject=Log4Delphi-Feedback%C2%A0getstarted.html">tcmiller@users.sourceforge.net</a>
+</div>
+</div>
+</body>
+</html>

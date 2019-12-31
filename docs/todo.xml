@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V1.3//EN" "document-v13.dtd">
+<document><header><title>Todo List</title></header><body>
+    <section><title>high</title><ul><li><strong>[docs]</strong> 
+&#9;&#9;Complete User's Guide.
+       &#8594; TCM</li><li><strong>[code]</strong> 
+&#9;&#9;XML and INI file configuration.
+       &#8594; Open</li></ul></section>
+  </body></document>

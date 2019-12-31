@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><!--
+   Copyright 2005-2006 Log4Delphi Project
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+  --><!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V1.2//EN" "http://apache.org/forrest/dtd/document-v12.dtd">
+<document> 
+    <header>
+        <title>Download Releases of Log4Delphi</title>
+    </header>
+    <body>
+        <section>
+            <title>Official Log4Delphi Releases</title>
+            <p>Official Source and Binary Packages can be found 
+&#9;&#9;&#9;&#9;<link href="https://sourceforge.net/project/showfiles.php?group_id=145326">
+&#9;&#9;&#9;&#9;&#9;here</link>.</p>            
+        </section>
+        <section>
+        &#9;<title>Verifying the Archive Integrity</title>
+        &#9;<p>Each archive in the file release section has an accompanying MD5 
+        &#9;file which has the same name of the archive it verifies with the 
+        &#9;<code>.MD5</code> extension. The MD5 file is a checksum of the 
+        &#9;archive generated at the same time that the archive is created, 
+        &#9;both files are then uploaded securely to the server. The MD5 file 
+        &#9;should be used to ensure the archive's integrity.</p>
+        &#9;<section>
+        &#9;&#9;<title>Windows</title>
+        &#9;&#9;<p>To verify the integrity of an archive using an MD5 checksum on
+        &#9;&#9;Windows requires a utility to do so. A free command line utlity
+        &#9;&#9;is available from: <link href="http://www.fourmilab.ch/md5/">
+        &#9;&#9;   http://www.fourmilab.ch/md5/</link>. Download the utility
+        &#9;&#9;   from this page, extract the archive to the location of your 
+        &#9;&#9;   choice and include the <code>md5.exe</code> file in your PATH 
+&#9;&#9;&#9;&#9;   variable.
+        &#9;&#9;</p>
+        &#9;&#9;<p> You can verify the contents of an archive by running the
+        &#9;&#9;utility in the command line and passing it the archive as a command
+&#9;&#9;&#9;&#9;line parameter, it will&#9;print the MD5 sum which you can check against 
+&#9;&#9;&#9;&#9;the MD5 checksum given in the MD5 file. As an example the utility was 
+&#9;&#9;&#9;&#9;run on a binary distribution and the MD5 file's contents printed to the
+        &#9;&#9;screen using the <code>more</code> command. The checksums are
+        &#9;&#9;identical.
+        &#9;&#9;</p>
+        &#9;&#9;<source xml:space="preserve"><![CDATA[
+F:\Development\log4delphi\dist\0.1>md5 log4delphi-0.1-bin.tar.gz
+D82AF52C3B33A1A90A4626A48914ACC5  log4delphi-0.1-bin.tar.gz
+
+F:\Development\log4delphi\dist\0.1>more log4delphi-0.1-bin.tar.gz.MD5
+d82af52c3b33a1a90a4626a48914acc6       		
+        		]]></source>
+        &#9;</section>
+        &#9;<section>
+        &#9;&#9;<title>Linux</title>
+        &#9;&#9;<p>Many linux distributions include the <code>md5</code> command 
+        &#9;&#9;line utility that can be used to verify the archive against the 
+        &#9;&#9;MD5 checksum. The md5 utility is part of the Open SSL package
+&#9;&#9;&#9;&#9;which needs to be installed on your machine.</p>
+&#9;&#9;&#9;&#9;<p>You can verify the contents of an archive by running the utility
+&#9;&#9;&#9;&#9;&#9;in the command line and passing the archive as a command line 
+&#9;&#9;&#9;&#9;&#9;parameter, it will print the md5 sum which you can check against
+&#9;&#9;&#9;&#9;&#9;the MD5 checksum given in the MD5 file. As an example, the utility
+&#9;&#9;&#9;&#9;&#9;was run on a binary distribution and the MD5 file's contents printed 
+&#9;&#9;&#9;&#9;&#9;using the <code>cat</code> command. The checksums are identical.</p>
+        &#9;&#9;<source xml:space="preserve"><![CDATA[
+[trevor@woodstock 0.1]]]><![CDATA[$ cat log4delphi-0.1-bin.tar.gz.MD5
+d82af52c3b33a1a90a4626a48914acc6
+[trevor@woodstock 0.1]]]><![CDATA[$ openssl md5 log4delphi-0.1-bin.tar.gz
+MD5(log4delphi-0.1-bin.tar.gz)= d82af52c3b33a1a90a4626a48914acc5
+        		]]></source>
+        &#9;</section>        &#9;
+        </section>
+    </body>
+    <footer>
+    &#9;<legal>Copyright 2005-2006 Log4Delphi Project. All Rights Reserved.</legal>
+    </footer>
+</document>

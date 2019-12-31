@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.7">
+<meta name="Forrest-skin-name" content="pelt">
+<title>Developer Guide</title>
+<link type="text/css" href="skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="skin/print.css" rel="stylesheet">
+<link type="text/css" href="skin/profile.css" rel="stylesheet">
+<script src="skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="">
+</head>
+<body onload="init()">
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<div class="breadtrail">
+<a href="http://www.sourceforge.net/">SourceForge</a> &gt; <a href="http://log4delphi.sourceforge.net/">Log4Delphi</a><script src="skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<div class="header">
+<div class="grouplogo">
+<a href=""></a>
+</div>
+<div class="projectlogo">
+<a href="http://log4delphi.sourceforge.net/"><img class="logoImage" alt="Log4Delphi" src="images/logo.gif" title="Log4Delphi Logging Suite for Borland Delphi"></a>
+</div>
+<div class="searchbox">
+<form action="http://www.google.com/search" method="get" class="roundtopsmall">
+<input value="http://log4delphi.sourceforge.net" name="sitesearch" type="hidden"><input onFocus="getBlank (this, 'Search the site with google');" size="25" name="q" id="query" type="text" value="Search the site with google">&nbsp; 
+                    <input attr="value" name="Search" value="Search" type="submit">
+</form>
+</div>
+<ul id="tabs">
+<li>
+<a class="base-not-selected" href="index.html">Log4Delphi</a>
+</li>
+<li>
+<a class="base-not-selected" href="quickstart.html">Quick Start</a>
+</li>
+<li>
+<a class="base-not-selected" href="overview.html">Documentation</a>
+</li>
+<li class="current">
+<a class="base-selected" href="developerguide.html">Contributing</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<div id="level2tabs"></div>
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<div id="menu">
+<div onclick="SwitchMenu('menu_selected_1.1', 'skin/')" id="menu_selected_1.1Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">Getting Involved</div>
+<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
+<div class="menupage">
+<div class="menupagetitle">Guide</div>
+</div>
+<div class="menuitem">
+<a href="design.html" title="Log4 Delphi Design Overview">Design</a>
+</div>
+<div class="menuitem">
+<a href="releases.html" title="Log4 Delphi Release Plan">Release Plan</a>
+</div>
+<div class="menuitem">
+<a href="contact.html" title="Contact Log4Delphi">Contact</a>
+</div>
+<div class="menuitem">
+<a href="todo.html" title="Still to do">To Do</a>
+</div>
+<div class="menuitem">
+<a href="standards.html" title="Log4Delphi Coding Standards">Coding Standards</a>
+</div>
+<div class="menuitem">
+<a href="cvs.html" title="Log4Delphi CVS Repository">CVS Repo</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<div id="credit2"></div>
+</div>
+<div id="content">
+<script language="Javascript" type="text/javascript">
+function printit() {
+  if (window.print) {
+    window.focus();
+    window.print();
+  }
+}
+        </script><script language="Javascript" type="text/javascript">
+var NS = (navigator.appName == "Netscape");
+var VERSION = parseInt(navigator.appVersion);
+if (VERSION > 3) {
+  document.write('<div title="Print this Page" class="printlink">');
+  document.write('  <a class="dida" href="javascript:printit()">');
+  document.write('    <img alt="print - icon" src="skin/images/printer.gif" class="skin">');
+  document.write('    <br>');
+  document.write('  PRINT</a>');
+  document.write('</div>');
+}
+        </script>
+<div title="raw XML" class="xmllink">
+<a class="dida" href="developerguide.xml"><img alt="XML - icon" src="skin/images/xmldoc.gif" class="skin"><br>
+        XML</a>
+</div>
+<div title="Portable Document Format" class="pdflink">
+<a class="dida" href="developerguide.pdf"><img alt="PDF -icon" src="skin/images/pdfdoc.gif" class="skin"><br>
+        PDF</a>
+</div>
+<h1>Developer Guide</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#Before+Sending+Code">Before Sending Code</a>
+</li>
+<li>
+<a href="#The+Next+Step">The Next Step</a>
+</li>
+<li>
+<a href="#Bug+Reports+and+Patches">Bug Reports and Patches</a>
+</li>
+<li>
+<a href="#Interested+in+Adding+A+Feature">Interested in Adding A Feature</a>
+</li>
+<li>
+<a href="#And+Finally...">And Finally...</a>
+</li>
+</ul>
+</div>
+    	
+<a name="N1000D"></a><a name="Before+Sending+Code"></a>
+<h2 class="boxed">Before Sending Code</h2>
+<div class="section">
+<p>Please read this section before sending code to one of the developers. First make sure you have read</p>
+<ol>
+    		    
+<li>
+<a href="userguide.html">User Guide</a>
+</li>
+    		    
+<li>
+<a href="bylaws.html">Project Bylaws</a>
+</li>
+    		    
+<li>
+<a href="troubleshooting.html">Troubleshooing Guide</a>
+</li>
+    		    
+<li>
+<a href="standards.html">Coding Standards</a>
+</li>
+    		    
+<li>
+<a href="cvs.html">CVS Information</a>
+</li>
+    		
+</ol>
+<p>as these documents all contain information that is vital to developers.</p>
+</div>
+    	
+<a name="N10036"></a><a name="The+Next+Step"></a>
+<h2 class="boxed">The Next Step</h2>
+<div class="section">
+<p>The next step is to join the developer mailing list and get in touch with the developers.</p>
+</div>
+    	
+<a name="N10040"></a><a name="Bug+Reports+and+Patches"></a>
+<h2 class="boxed">Bug Reports and Patches</h2>
+<div class="section">
+<p>The <a href="troubleshooting.html">Troubleshooing Guide</a> contains all the information needed for making bug reports and submitting patches. Please do not email this information to the developers or the developer list.</p>
+</div>
+    	
+<a name="N1004E"></a><a name="Interested+in+Adding+A+Feature"></a>
+<h2 class="boxed">Interested in Adding A Feature</h2>
+<div class="section">
+<p>If you are interested in adding a feature to Log4Delphi, first discuss it on the developer mailing list. This is to prevent people from doing work which might not be used, either because someone is already working on that feature or because it is not in line with the general direction of the project.</p>
+</div>
+    	
+<a name="N10058"></a><a name="And+Finally..."></a>
+<h2 class="boxed">And Finally...</h2>
+<div class="section">
+<p>Don't beg to be given developer status or commit access to the code base. You will be invited by an administrator only if you make sufficient and welcome contributions to the project. Read <a href="bylaws.html">Project Bylaws</a> to understand how this works.</p>
+</div>
+    
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Log4Delphi Project</div>
+<div id="feedback">
+    Send feedback about the website to:
+  <a id="feedbackto" href="mailto:tcmiller@users.sourceforge.net?subject=Log4Delphi-Feedback%C2%A0developerguide.html">tcmiller@users.sourceforge.net</a>
+</div>
+</div>
+</body>
+</html>

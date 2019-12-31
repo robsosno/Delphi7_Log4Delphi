@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><!--
+   Copyright 2005-2006 Log4Delphi Project
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+  --><!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V1.2//EN" "http://apache.org/forrest/dtd/document-v12.dtd">
+<document> 
+    <header>
+        <title>Welcome to Log4Delphi</title>
+    </header>
+    <body>
+        <section>
+            <title>What is Log4Delphi?</title>
+            <p>Log4Delphi is an Open Source project that aims to produce a high quality 
+&#9;&#9;&#9;&#9;and usable logging suite for Borland's Delphi based on the Log4J package 
+&#9;&#9;&#9;&#9;from the Apache Software Foundation.</p>
+&#9;&#9;&#9;<p>The main goals of the project are:</p>
+&#9;&#9;&#9;<ul>
+&#9;&#9;&#9;&#9;<li>Simplicity. Simplicity should drive everything, the suite should 
+&#9;&#9;&#9;&#9;&#9;be simple to understand and simple to use.</li>
+&#9;&#9;&#9;&#9;<li>Loosely based on Log4J. The Log4J package is a mature logging 
+&#9;&#9;&#9;&#9;&#9;package for the Java Platform. Log4Delphi is based on that package 
+&#9;&#9;&#9;&#9;&#9;in such a way that those who know and understand Log4J will easily 
+&#9;&#9;&#9;&#9;&#9;pick up and learn Log4Delphi.</li>
+&#9;&#9;&#9;&#9;<li>Finally, Log4Delphi should be flexible enough to easily integrate 
+&#9;&#9;&#9;&#9;&#9;into new and existing Delphi projects, by following standard Delphi
+&#9;&#9;&#9;&#9;&#9;practices.</li>
+&#9;&#9;&#9;</ul>&#9;&#9;&#9;
+&#9;&#9;&#9;<p>Those interested in the Log4J package can find more information 
+&#9;&#9;&#9;&#9;<link href="http://logging.apache.org/log4j">here</link>.</p>
+        </section>
+&#9;&#9;<section>
+&#9;&#9;&#9;<title>What is Logging?</title>
+&#9;&#9;&#9;<p>Inserting log statements into source code is a low-tech method for 
+&#9;&#9;&#9;&#9;debugging it. It may also be the only way since debuggers are not 
+&#9;&#9;&#9;&#9;always available or applicable, often the case for distributed 
+&#9;&#9;&#9;&#9;applications.</p>
+&#9;&#9;&#9;<p>On the other hand, some people argue that log statements pollute source 
+&#9;&#9;&#9;&#9;code and decrease legibility. Generally log statements increase the size 
+&#9;&#9;&#9;&#9;of the code and reduce its speed, even when logging is turned off. Given 
+&#9;&#9;&#9;&#9;that a reasonably sized application may contain thousands of log 
+&#9;&#9;&#9;&#9;statements, speed is of particular importance.</p>
+&#9;&#9;&#9;<p>With Log4Delphi it is possible to enable logging at runtime without 
+&#9;&#9;&#9;&#9;modifying (re-compiling) the application binary. The Log4Delphi suite is 
+&#9;&#9;&#9;&#9;designed so that these statements can remain in shipped code without 
+&#9;&#9;&#9;&#9;incurring a heavy performance cost. Logging behavior can be controlled 
+&#9;&#9;&#9;&#9;by editing a configuration file, without touching the application 
+&#9;&#9;&#9;&#9;binary.</p>
+&#9;&#9;&#9;<p>Logging equips the developer with detailed context for application 
+&#9;&#9;&#9;&#9;failures. On the other hand, testing provides quality assurance and 
+&#9;&#9;&#9;&#9;confidence in the application. Logging and testing should not be confused.
+&#9;&#9;&#9;&#9;They are complementary. When logging is wisely used, it can prove to be 
+&#9;&#9;&#9;&#9;an essential tool.</p>
+&#9;&#9;&#9;<p>The target of the log output can be a console window, file or a TStream 
+&#9;&#9;&#9;&#9;object, making it possible to send log statements to any imaginable 
+&#9;&#9;&#9;&#9;destination, even to a remote log server!</p>&#9;&#9;&#9;
+&#9;&#9;</section>
+&#9;&#9;<section>
+&#9;&#9;&#9;<title>How Much Does Log4Delphi Cost?</title>
+&#9;&#9;&#9;<p>Since Log4Delphi is licenced under an Open Source license it is completely 
+&#9;&#9;&#9;&#9;free of charge for any application. This means 
+&#9;&#9;&#9;&#9;you can use it in your commercial applications without any worry.</p>
+&#9;&#9;&#9;<p>Support is also free, just join the mailing list and ask any questions
+&#9;&#9;&#9;&#9;you want.</p>
+&#9;&#9;&#9;<p>The source code is available, so if a feature you want is missing, feel
+&#9;&#9;&#9;&#9;free to implement it!</p>
+&#9;&#9;</section>&#9;&#9;
+&#9;&#9;<section>
+            <title>Project Status</title>
+&#9;&#9;&#9;<p>Log4Delphi is still in early stages of development and will continue to 
+&#9;&#9;&#9;&#9;grow through a series of 0.x releases.</p>
+&#9;&#9;&#9;<p>It is important for users and developers to realise that this is evolving 
+&#9;&#9;&#9;&#9;software and therefore, prior to a 1.0 release, ensuring quality of 
+&#9;&#9;&#9;&#9;design is considered more important than retaining backwards 
+&#9;&#9;&#9;&#9;compatibility. Having said that, the project strives not to make any 
+&#9;&#9;&#9;&#9;undocumented backwards-incompatible changes.</p>
+&#9;&#9;</section>       &#9;
+        <section>
+            <title>Developing Log4Delphi</title>
+            <p>Log4Delphi is a native 32Bit Borland Delphi Package that is 
+&#9;&#9;&#9;&#9;open source and developed in Borland's Delphi version 6 on Windows XP.</p>
+&#9;&#9;&#9;<p>Third party libraries used by Log4Delphi are:</p>
+&#9;&#9;&#9;<ul>
+&#9;&#9;&#9;&#9;<li><link href="http://dunit.sourceforge.net">DUnit</link> - Unit testing for Delphi.</li>
+&#9;&#9;&#9;&#9;<li><link href="http://dephicodetodoc.sourceforge.net">DelphiCodeToDoc</link> - Documentation for Delphi.</li>
+&#9;&#9;&#9;</ul>&#9;&#9;&#9;
+        </section>        
+        <section>
+            <title>Where Can I Get It?</title>
+&#9;&#9;&#9;<p>Log4Delphi is developed using principles from the XP aproach to software
+&#9;&#9;&#9;&#9;development which means that new releases will be released often,
+&#9;&#9;&#9;&#9;almost once a month, so check back often for new releases.</p>
+            <p>Official releases are available from this site 
+                <link href="download.html">here</link>.</p>
+&#9;&#9;&#9;<p>A release guide may be found 
+                <link href="releases.html">here</link>.</p>
+        </section>
+        <section>
+            <title>How Can I Contribute?</title>
+            <p>Download it and use it. Then share your experiences with other users and 
+&#9;&#9;&#9;&#9;developers on the mailing list by joining the mailing list
+&#9;&#9;&#9;&#9;<link href="contact.html">here</link>. You can also use the mailing
+&#9;&#9;&#9;&#9;list to discuss what you like and don't like about Log4Delphi as
+&#9;&#9;&#9;&#9;well as what you would like to see changed, added or removed.</p>
+        </section>
+    </body>
+    <footer>
+    &#9;<legal>Copyright 2005-2006 Log4Delphi Project. All Rights Reserved.</legal>
+    </footer>
+</document>

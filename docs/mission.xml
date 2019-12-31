@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><!--
+   Copyright 2005-2006 Log4Delphi Project
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+  --><!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V1.2//EN" "http://apache.org/forrest/dtd/document-v12.dtd">
+<document>
+    <header>
+        <title>Log4Delphi Project Mission</title>
+    </header>
+    <body>
+    &#9;<section>
+    &#9;&#9;<title>Mission Statement</title>
+    &#9;&#9;<p>The project's mission statement is as folows:</p>
+    &#9;&#9;<p><em>To produce a high quality and usable logging suite for Borland's Delphi loosely based on the Log4J package.</em></p>
+    &#9;</section>
+    &#9;<section>
+    &#9;&#9;<title>Project Goals</title>
+    &#9;&#9;<p>The project has three main goals:</p>
+    &#9;&#9;<dl>
+    &#9;&#9;    <dt>Simplicity</dt>
+    &#9;&#9;    <dd>Simplicity should drive everything, the suite should be simple to understand and simple to use.</dd>
+    &#9;&#9;    <dt>Loosely based on Log4J</dt>
+    &#9;&#9;    <dd>The Log4J package is a mature logging package for the Java Platform. Log4Delphi is based on that package in such a way that those who know and understand Log4J will easily pick up and learn Log4Delphi.</dd>
+    &#9;&#9;    <dt>Flexible</dt>
+    &#9;&#9;    <dd>Log4Delphi should be flexible enough to easily integrate into new and existing Delphi projects, by following standard Delphi practices.</dd>
+    &#9;&#9;</dl>
+    &#9;</section>
+    &#9;<section>
+    &#9;&#9;<title>Project Development</title>
+    &#9;&#9;<p>Project development follows three basic principles:</p>
+    &#9;&#9;<ul>
+    &#9;&#9;    <li>collaborative software development with respectful, honest, technical-based interaction</li>
+    &#9;&#9;    <li>commercial-friendly standard license</li>
+    &#9;&#9;    <li>consistently high quality software</li>
+    &#9;&#9;</ul>
+    &#9;</section>
+    &#9;<section>
+    &#9;&#9;<title>Project Methodology</title>
+    &#9;&#9;<p>The project employs the eXtreme Programming methodology focussing on three core principles:</p>
+    &#9;&#9;<dl>
+    &#9;&#9;    <dt>Frequent Releases</dt>
+    &#9;&#9;    <dd>The project aims to have a release every month, with each release introducing one new feature.</dd>
+    &#9;&#9;    <dt>Test Driven Development</dt>
+    &#9;&#9;    <dd>Unit testing allows the code base to be easily refactored without breaking any existing code.</dd>
+    &#9;&#9;    <dt>Refactoring</dt>
+    &#9;&#9;    <dd>Constantly improving the code base through refactoring.</dd>
+    &#9;&#9;</dl>
+    &#9;</section>
+    </body>
+    <footer>
+    &#9;<legal>Copyright 2005-2006 Log4Delphi Project. All Rights Reserved.</legal>
+    </footer>
+</document>

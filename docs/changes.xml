@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V1.3//EN" "document-v13.dtd">
+<document><header><title>History of Changes</title></header><body><p><link href="changes.rss"><img alt="RSS" src="images/rss.png"/></link></p>
+    <section id="version_0.5 [Isis]"><title>Version 0.5 [Isis] (5 January 2005)</title><section><title>docs</title><ul><li><icon alt="add" src="images/add.jpg"/>
+&#9;&#9;  Added Developer Guide, Documentation Overview, Project Mission, Project Bylaws, Troubleshooting Guide, How-To Create A Package.
+      (TCM)</li><li><icon alt="update" src="images/update.jpg"/>
+&#9;&#9;  Updated HTML documentation: HTML Documentation Structure and Organization, UML Diagram.
+      (TCM)</li></ul></section><section><title>source</title><ul><li><icon alt="add" src="images/add.jpg"/>
+&#9;&#9;  Added: TDBAppender, TDBLogInserter, initialization and finalization to TLevel, TPatternLayout.
+      (TCM)</li><li><icon alt="update" src="images/update.jpg"/>
+&#9;&#9;  Updated: Fixed small bug in TPrintWriter and TFileAppender, Completely rewritten unit tests.
+      (TCM)</li></ul></section></section>
+&#9;<section id="version_0.4 [Valenti]"><title>Version 0.4 [Valenti] (6 December 2005)</title><section><title>docs</title><ul><li><icon alt="add" src="images/add.jpg"/>
+&#9;&#9;  Added PDF version of all documentation.
+      (TCM)</li><li><icon alt="update" src="images/update.jpg"/>
+&#9;&#9;  Updated HTML documentation: Release Plan, Welcome Page, Tutorial, User Guide, FAQ and To Do List.
+      (TCM)</li></ul></section><section><title>source</title><ul><li><icon alt="add" src="images/add.jpg"/>
+&#9;&#9;  Added: TPropertyConfigurator, TOptionConverter, TStringTokenizer and Unit test. Added example properties file.
+      (TCM)</li><li><icon alt="update" src="images/update.jpg"/>
+&#9;&#9;  Updated: Made default site-wide threshold to the ALL level, Added removeAllAppenders to TLogger and Fixed small bug in TProperties.
+      (TCM)</li></ul></section></section>&#9;
+&#9;<section id="version_0.3 [River Dog]"><title>Version 0.3 [River Dog] (2 October 2005)</title><section><title>docs</title><ul><li><icon alt="add" src="images/add.jpg"/>
+&#9;&#9;  Added: Created first draft of User Guide.
+      (TCM)</li><li><icon alt="update" src="images/update.jpg"/>
+&#9;&#9;  Updated HTML documentation: Release Plan, Welcome Page and Install instructions.
+      (TCM)</li></ul></section><section><title>source</title><ul><li><icon alt="add" src="images/add.jpg"/>
+&#9;&#9;  Added: THTMLLayout, XMLLayout and Unit test.
+      (TCM)</li><li><icon alt="update" src="images/update.jpg"/>
+&#9;&#9;  Updated: Override Signature to destructors, fixed bug #1297284. Added Delphi 5 package and changed code to compile on Delphi 5.
+      (TCM)</li><li><icon alt="update" src="images/update.jpg"/>
+&#9;&#9;  Updated: Changed build.xml to only perform zipping of distributions, compilation is now performed entirely through make using the Makefile.
+      (TCM)</li></ul></section></section>
+    <section id="version_0.2 [Valhandra]"><title>Version 0.2 [Valhandra] (3 September 2005)</title><section><title>admin</title><ul><li><icon alt="add" src="images/add.jpg"/>
+        Initial import into CVS.
+      (TCM)</li></ul></section><section><title>docs</title><ul><li><icon alt="add" src="images/add.jpg"/>
+&#9;&#9;  Added: Changes, Tutorial, API, Design Overview, Release Plan, Coding Standards, CVS Repo and Documentation and Contributing sections to HTML Docsumentation.
+      (TCM)</li><li><icon alt="update" src="images/update.jpg"/>
+&#9;&#9;  Updated: Readme, Download Page, FAQ, Contact Page.
+      (TCM)</li></ul></section><section><title>source</title><ul><li><icon alt="add" src="images/add.jpg"/>
+&#9;&#9;  Added: TWriterAppender, TErrorHandler, TOnlyOnceErrorHandler, TLogLog.
+      (TCM)</li></ul></section><section><title>TLayout</title><ul><li><icon alt="update" src="images/update.jpg"/>
+          TLayout: added the getHeader and getFooter methods as well as ignoresException and getContentType.
+      (TCM)</li></ul></section><section><title>TLogger</title><ul><li><icon alt="update" src="images/update.jpg"/>
+          Added Util: Util folder now contains TPrintWRiter, TProperties and TStrings. These are used internally by Log4Delphi.
+      (TCM)</li><li><icon alt="update" src="images/update.jpg"/>
+          TLogger: added multiple loggers accessible with the TLogger.getInstance(name) method.
+      (TCM)</li></ul></section><section><title>TLoggingEvent</title><ul><li><icon alt="update" src="images/update.jpg"/>
+&#9;&#9;  TLoggingEvent: added the exception field and getException method.
+      (TCM)</li></ul></section></section>&#9;
+&#9;<section id="version_0.1 [Nasedo]"><title>Version 0.1 [Nasedo] (6 August 2005)</title><section><title>admin</title><ul><li><icon alt="add" src="images/add.jpg"/>
+        Initial Release.
+      (TCM)</li></ul></section></section>
+  </body></document>

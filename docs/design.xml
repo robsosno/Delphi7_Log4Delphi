@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><!--
+   Copyright 2005-2006 Log4Delphi Project
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+  --><!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V1.2//EN" "http://apache.org/forrest/dtd/document-v12.dtd">
+<document> 
+    <header>
+        <title>Log4Delphi Design Overview</title>
+    </header>
+    <body>
+&#9;&#9;<section>
+&#9;&#9;&#9;<title>Brief Overview</title>
+&#9;&#9;&#9;<p>Inserting log statements into source code is a low-tech method for 
+&#9;&#9;&#9;&#9;debugging it. It may also be the only way since debuggers are not 
+&#9;&#9;&#9;&#9;always available or applicable, often the case for distributed 
+&#9;&#9;&#9;&#9;applications.</p>
+&#9;&#9;&#9;<p>On the other hand, some people argue that log statements pollute source 
+&#9;&#9;&#9;&#9;code and decrease legibility. Generally log statements increase the size 
+&#9;&#9;&#9;&#9;of the code and reduce its speed, even when logging is turned off. Given 
+&#9;&#9;&#9;&#9;that a reasonably sized application may contain thousands of log 
+&#9;&#9;&#9;&#9;statements, speed is of particular importance.</p>
+&#9;&#9;&#9;<p>With Log4Delphi it is possible to enable logging at runtime without 
+&#9;&#9;&#9;&#9;modifying the application binary. The Log4Delphi suite is designed so 
+&#9;&#9;&#9;&#9;that these statements can remain in shipped code without incurring a 
+&#9;&#9;&#9;&#9;heavy performance cost. Logging behavior can be controlled by editing a 
+&#9;&#9;&#9;&#9;configuration file, without touching the application binary.</p>
+&#9;&#9;&#9;<p>Logging equips the developer with detailed context for application 
+&#9;&#9;&#9;&#9;failures. On the other hand, testing provides quality assurance and 
+&#9;&#9;&#9;&#9;confidence in the application. Logging and testing should not be confused.
+&#9;&#9;&#9;&#9;They are complementary. When logging is wisely used, it can prove to be 
+&#9;&#9;&#9;&#9;an essential tool.</p>
+&#9;&#9;&#9;<p>The target of the log output can be a console window, file or a TStream 
+&#9;&#9;&#9;&#9;object, making it possible to send log statements to any imaginable 
+&#9;&#9;&#9;&#9;destination, even to a remote log server!</p>
+&#9;&#9;</section>
+&#9;&#9;<section>
+&#9;&#9;&#9;<title>Design</title>
+&#9;&#9;&#9;<p>Based on the above overview, Log4Delphi is a Native 32 bit Borland Delphi
+&#9;&#9;&#9;&#9;package that acts as a logging suite for Delphi applications. It is an 
+&#9;&#9;&#9;&#9;object-oriented package that uses Delphi standard practices to ensure
+&#9;&#9;&#9;&#9;that the suite is easily integrated into new and existing applications. As
+&#9;&#9;&#9;&#9;such, each class is defined in its own unit, with each unit named after
+&#9;&#9;&#9;&#9;the class with a <code>Unit</code> suffix, for example: 
+&#9;&#9;&#9;&#9;<code>TAppenderUnit</code>. Standard object oriented principles are
+&#9;&#9;&#9;&#9;used as well as a number of well chosen and obvious design
+&#9;&#9;&#9;&#9;patterns.</p>
+&#9;&#9;&#9;<p>The suite is based on five core components, namely: Loggers, Levels,
+&#9;&#9;&#9;&#9;Appenders, Layouts and LoggingEvents. Loggers have the responsibility of 
+&#9;&#9;&#9;&#9;actually performming the logging and they provide the interface that 
+&#9;&#9;&#9;&#9;application developers will use to use the logging suite. Levels represent
+&#9;&#9;&#9;&#9;different levels of logging that may be performed. Appenders are responsible
+&#9;&#9;&#9;&#9;for actually appending a logging message to the target, for example a file.
+&#9;&#9;&#9;&#9;Layouts are used to format logging messages. Logging events represent the
+&#9;&#9;&#9;&#9;actual event that should be logged.</p>
+&#9;&#9;&#9;<p>A typical sequence that occurs when an application sends a message to the
+&#9;&#9;&#9;&#9;logging suite is as follows:</p>
+&#9;&#9;&#9;<ol>
+&#9;&#9;&#9;&#9;<li>A logger is selected to perform logging. It checks its assigned logging 
+&#9;&#9;&#9;&#9;&#9;level to see if it may log the message.</li>
+&#9;&#9;&#9;&#9;<li>If the logger may log the message, it creates a logging event and 
+&#9;&#9;&#9;&#9;&#9;sends the event to all its appenders.</li>
+&#9;&#9;&#9;&#9;<li>Each appender checks its assigned logging level to see if it may log
+&#9;&#9;&#9;&#9;&#9;the event.</li>
+&#9;&#9;&#9;&#9;<li>If the appender may log the event it passes the event to its assigned
+&#9;&#9;&#9;&#9;&#9;layout to format the event as a message.</li>
+&#9;&#9;&#9;&#9;<li>The appender then appends the formatted message to its target.</li>
+&#9;&#9;&#9;</ol>
+&#9;&#9;&#9;<p>This may be represented by the following diagram. [Click to view full size]</p>
+&#9;&#9;&#9;<p><link href="images/sequence_large.gif"><img src="images/sequence_thumb.gif" alt="[Click to view full size]"/></link></p>
+&#9;&#9;</section>
+&#9;&#9;<section>
+&#9;&#9;&#9;<title>UML</title>
+&#9;&#9;&#9;<p>The UML Class Diagram for the project is given below. It only includes the 
+&#9;&#9;&#9;&#9;core components of the suite and is designed to give an overview of the 
+&#9;&#9;&#9;&#9;design of the suite. [Click to view full size]</p>
+&#9;&#9;&#9;<p><link href="images/uml_large.gif"><img src="images/uml_thumb.gif" alt="[Click to view full size]"/></link></p>
+&#9;&#9;</section>&#9;&#9;&#9;&#9;
+    </body>
+    <footer>
+    &#9;<legal>Copyright 2005-2006 Log4Delphi Project. All Rights Reserved.</legal>
+    </footer>
+</document>

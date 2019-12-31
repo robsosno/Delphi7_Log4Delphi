@@ -1,0 +1,805 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.7">
+<meta name="Forrest-skin-name" content="pelt">
+<title>Log4Delphi User Guide</title>
+<link type="text/css" href="skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="skin/print.css" rel="stylesheet">
+<link type="text/css" href="skin/profile.css" rel="stylesheet">
+<script src="skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="">
+</head>
+<body onload="init()">
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<div class="breadtrail">
+<a href="http://www.sourceforge.net/">SourceForge</a> &gt; <a href="http://log4delphi.sourceforge.net/">Log4Delphi</a><script src="skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<div class="header">
+<div class="grouplogo">
+<a href=""></a>
+</div>
+<div class="projectlogo">
+<a href="http://log4delphi.sourceforge.net/"><img class="logoImage" alt="Log4Delphi" src="images/logo.gif" title="Log4Delphi Logging Suite for Borland Delphi"></a>
+</div>
+<div class="searchbox">
+<form action="http://www.google.com/search" method="get" class="roundtopsmall">
+<input value="http://log4delphi.sourceforge.net" name="sitesearch" type="hidden"><input onFocus="getBlank (this, 'Search the site with google');" size="25" name="q" id="query" type="text" value="Search the site with google">&nbsp; 
+                    <input attr="value" name="Search" value="Search" type="submit">
+</form>
+</div>
+<ul id="tabs">
+<li>
+<a class="base-not-selected" href="index.html">Log4Delphi</a>
+</li>
+<li>
+<a class="base-not-selected" href="quickstart.html">Quick Start</a>
+</li>
+<li class="current">
+<a class="base-selected" href="overview.html">Documentation</a>
+</li>
+<li>
+<a class="base-not-selected" href="developerguide.html">Contributing</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<div id="level2tabs"></div>
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<div id="menu">
+<div onclick="SwitchMenu('menu_selected_1.1', 'skin/')" id="menu_selected_1.1Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">Documentation</div>
+<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="overview.html" title="Documentation Overview">Overview</a>
+</div>
+<div class="menuitem">
+<a href="getstarted.html" title="Getting Started With Log4Delphi">Get Started</a>
+</div>
+<div class="menuitem">
+<a href="tutorial.html" title="Log4Delphi Tutorial">Tutorial</a>
+</div>
+<div class="menupage">
+<div class="menupagetitle">User Guide</div>
+</div>
+<div class="menuitem">
+<a href="faq.html" title="Frequently Asked Questions about Log4Delphi">FAQ</a>
+</div>
+<div class="menuitem">
+<a href="http://log4delphi.sourceforge.net/api/html/Log4Delphi.htm" title="Log4Delphi API">API</a>
+</div>
+<div class="menuitem">
+<a href="troubleshooting.html" title="Troubleshooting Log4Delphi">Troubleshooting</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2', 'skin/')" id="menu_1.2Title" class="menutitle">How-To</div>
+<div id="menu_1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="howto-pkg.html" title="How-To Create A package">Create A Package</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<div id="credit2"></div>
+</div>
+<div id="content">
+<script language="Javascript" type="text/javascript">
+function printit() {
+  if (window.print) {
+    window.focus();
+    window.print();
+  }
+}
+        </script><script language="Javascript" type="text/javascript">
+var NS = (navigator.appName == "Netscape");
+var VERSION = parseInt(navigator.appVersion);
+if (VERSION > 3) {
+  document.write('<div title="Print this Page" class="printlink">');
+  document.write('  <a class="dida" href="javascript:printit()">');
+  document.write('    <img alt="print - icon" src="skin/images/printer.gif" class="skin">');
+  document.write('    <br>');
+  document.write('  PRINT</a>');
+  document.write('</div>');
+}
+        </script>
+<div title="raw XML" class="xmllink">
+<a class="dida" href="userguide.xml"><img alt="XML - icon" src="skin/images/xmldoc.gif" class="skin"><br>
+        XML</a>
+</div>
+<div title="Portable Document Format" class="pdflink">
+<a class="dida" href="userguide.pdf"><img alt="PDF -icon" src="skin/images/pdfdoc.gif" class="skin"><br>
+        PDF</a>
+</div>
+<h1>Log4Delphi User Guide</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#About+This+Guide">About This Guide</a>
+</li>
+<li>
+<a href="#Logging+With+Log4Delphi">Logging With Log4Delphi</a>
+<ul class="minitoc">
+<li>
+<a href="#What+is+Log4Delphi%3F">What is Log4Delphi?</a>
+</li>
+<li>
+<a href="#What+Can+Log4Delphi+Do+For+Me%3F">What Can Log4Delphi Do For Me?</a>
+</li>
+<li>
+<a href="#How+Log4Delphi+Works">How Log4Delphi Works</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Log4Delphi+Basic+Concepts">Log4Delphi Basic Concepts</a>
+<ul class="minitoc">
+<li>
+<a href="#Installing+Log4Delphi">Installing Log4Delphi</a>
+<ul class="minitoc">
+<li>
+<a href="#Installing+The+Package">Installing The Package</a>
+</li>
+<li>
+<a href="#Using+The+Source+Code">Using The Source Code</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Upgrading+Log4Delphi">Upgrading Log4Delphi</a>
+<ul class="minitoc">
+<li>
+<a href="#Binary+Package">Binary Package</a>
+</li>
+<li>
+<a href="#Source+Code">Source Code</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Loggers%2C+Appenders+and+Layouts">Loggers, Appenders and Layouts</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Five+Core+Components">Five Core Components</a>
+<ul class="minitoc">
+<li>
+<a href="#Levels">Levels</a>
+</li>
+<li>
+<a href="#LoggingEvents">LoggingEvents</a>
+</li>
+<li>
+<a href="#Layouts">Layouts</a>
+<ul class="minitoc">
+<li>
+<a href="#TSimpleLayout">TSimpleLayout</a>
+</li>
+<li>
+<a href="#THTMLLayout">THTMLLayout</a>
+</li>
+<li>
+<a href="#TXMLLayout">TXMLLayout</a>
+</li>
+<li>
+<a href="#TPatternLayout">TPatternLayout</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Appenders">Appenders</a>
+<ul class="minitoc">
+<li>
+<a href="#TFileAppender">TFileAppender</a>
+</li>
+<li>
+<a href="#TRollingFileAppender">TRollingFileAppender</a>
+</li>
+<li>
+<a href="#TDBAppender">TDBAppender</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Loggers">Loggers</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Configuration">Configuration</a>
+<ul class="minitoc">
+<li>
+<a href="#The+Configuration+File">The Configuration File</a>
+<ul class="minitoc">
+<li>
+<a href="#Controlling+Log4Delphi%27s+Internal+Logging">Controlling Log4Delphi's Internal Logging</a>
+</li>
+<li>
+<a href="#Configuring+the+Root+Logger">Configuring the Root Logger</a>
+</li>
+<li>
+<a href="#Configuring+the+Appender">Configuring the Appender</a>
+</li>
+<li>
+<a href="#Setting+the+Layout">Setting the Layout</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Summary">Summary</a>
+</li>
+</ul>
+</div>
+        
+<a name="N1000D"></a><a name="About+This+Guide"></a>
+<h2 class="boxed">About This Guide</h2>
+<div class="section">
+<p>The Log4Delphi User Guide is a document with the goal of assisting users in getting acquianted with the Log4Delphi Logging Suite, its components and how it can be employed in applications. This guide will attempt to provide a more rounded and in depth discussion on the various components of Log4Delphi as well as how to use it.</p>
+<div class="frame warning">
+<div class="label">Warning</div>
+<div class="content">This guide is still a work in progress, and far from complete!</div>
+</div>
+</div>
+		
+<a name="N1001A"></a><a name="Logging+With+Log4Delphi"></a>
+<h2 class="boxed">Logging With Log4Delphi</h2>
+<div class="section">
+<a name="N10020"></a><a name="What+is+Log4Delphi%3F"></a>
+<h3 class="boxed">What is Log4Delphi?</h3>
+<p>Log4Delphi is a logging suite for Borland's Delphi based on the Log4J package from the Apache Software foundation. It is not an exact port of Log4J, but rather a similar package based on the principles of simplicity and focus.</p>
+<p>Logging is often used in conjunction with testing in order to debug applications, especially when debugging tools are not available, as is the case with distributed applications. Log4Delphi is a suite that can perform the logging function in your applications.</p>
+<p>Log4Delphi is an open source project that aims to produce a high quality and usable logging suite. It is a native 32bit Borland Delphi Package developed with Borland Delphi version 6 on Windows XP.</p>
+<a name="N10030"></a><a name="What+Can+Log4Delphi+Do+For+Me%3F"></a>
+<h3 class="boxed">What Can Log4Delphi Do For Me?</h3>
+<p>Logging is considered a low level debugging technique but is not meant to replace a traditional debugger, in fact the two can go hand in hand. When debugging an application it is good to have a clear picture of what the application does at every step of the way, especially large applications that have many things going on in the background. Logging is a way to find out what the application is doing, how and when.</p>
+<p>Log4Delphi is a suite that provides logging capabilities for Borland's Delphi. It can be used to perform logging of almost any kind of application, especially those that are often difficult to debug like distributed systems.</p>
+<a name="N1003D"></a><a name="How+Log4Delphi+Works"></a>
+<h3 class="boxed">How Log4Delphi Works</h3>
+<p>The application developer decides to generate a message that needs to be logged whenever something important in the application occurs, for example: the click of a button. The developer then decides where this message should go, its <em>target</em>, typically a file, and the developer may control the message's <em>format</em>.</p>
+<p>An important aspect is the ability to assign different priority levels to the message and further to only log messages with a certain priority level. This affords the developer a large amount of control over how logging gets performed, for example, messages of a certain priority can be logged to a file and other messages with a different priority to another target.</p>
+</div>
+		
+<a name="N10051"></a><a name="Log4Delphi+Basic+Concepts"></a>
+<h2 class="boxed">Log4Delphi Basic Concepts</h2>
+<div class="section">
+<a name="N10057"></a><a name="Installing+Log4Delphi"></a>
+<h3 class="boxed">Installing Log4Delphi</h3>
+<p>There are two ways in which you can install and use Log4Delphi. 
+				The first is to install the package and the second is to simply 
+				include the source code in your application's code base. Both have 
+				pros and cons and should be carefully considered before making the 
+				decision.</p>
+<a name="N10060"></a><a name="Installing+The+Package"></a>
+<h4>Installing The Package</h4>
+<p>Installing the Log4Delphi package will make it available to be 
+					used in all your projects.</p>
+<p>Using a binary distribution (<span class="codefrag">log4delphi-</span><em>version</em>
+					<span class="codefrag">-bin.</span><em>archive</em>), the steps are:</p>
+<ol>
+					
+<li>Launch Delphi.</li>
+					
+<li>Select <span class="codefrag">Component &gt; Install Packages</span> from
+						the main menu.</li>
+					
+<li>Click the <span class="codefrag">Add</span> button.</li>
+					
+<li>Browse to where you extracted the archive and select the
+						file named <span class="codefrag">log4delphi.bpl</span>, should be in the
+						<span class="codefrag">bin/</span> directory.</li>
+					
+<li>You may need to add the compilation units to your
+						library path. To do so, select 
+						<span class="codefrag">Tools &gt; Environment Options</span> from the
+						main menu.</li>
+					
+<li>Select the Library Tab and add the folder containing
+						<span class="codefrag">log4delphi.bpl</span> to the library path.</li>
+					
+<li>You are ready to go!</li>
+				
+</ol>
+<div class="frame note">
+<div class="label">Note</div>
+<div class="content">You may have to create a package for your version of Delphi. To find out how to do this, see <a href="howto-pkg.html">here</a>.</div>
+</div>
+<a name="N100A8"></a><a name="Using+The+Source+Code"></a>
+<h4>Using The Source Code</h4>
+<p>This option is best for people who wish to add to or extend 
+					Log4Delphi or people who are busy developing Log4Delphi or
+					people who wish to include Log4Delphi into their existing
+					project's code base.</p>
+<p>Using a source distribution (<span class="codefrag">log4delphi-</span><em>version</em>
+					<span class="codefrag">-src.</span><em>archive</em>), the steps are:</p>
+<ol>
+					
+<li>Copy all the *.pas files from the 
+						<span class="codefrag">log4delphi\src\delphi</span> directory to your
+						project's source directory (include the <span class="codefrag">util</span>)
+						directory.</li>
+					
+<li>Launch Delphi and Open your project.</li>
+					
+<li>Select <span class="codefrag">Project &gt; Add To Project</span> in the
+						main menu.</li>
+					
+<li>In the dialog that opens, select all the Log4Delphi source 
+						files <span class="codefrag">*.pas</span> that you added earlier.</li>
+					
+<li>Click the <span class="codefrag">Open</span> button.</li>
+					
+<li>Now build your project.</li>
+					
+<li>You are ready to go!</li>
+				
+</ol>
+<a name="N100E7"></a><a name="Upgrading+Log4Delphi"></a>
+<h3 class="boxed">Upgrading Log4Delphi</h3>
+<p>You can upgrade from a previous version in one of two ways depending on how you installed Log4Delphi.</p>
+<a name="N100F0"></a><a name="Binary+Package"></a>
+<h4>Binary Package</h4>
+<p>If you installed the Log4Delphi binary package, you will need to first uninstall this package before installing the newer version package. This is done in Delphi.</p>
+<ol>
+					    
+<li>First launch Delphi.</li>
+					    
+<li>Select <em>Install Packages</em> from the <em>Component</em> menu.</li>
+					    
+<li>Select the package you wish to uninstall, in this case Log4Delphi and click the <em>Remove</em> button. This will remove the package.</li>
+					    
+<li>Now install the newer Log4Delphi package.</li>
+					
+</ol>
+<a name="N10112"></a><a name="Source+Code"></a>
+<h4>Source Code</h4>
+<p>If you copied the source code into your project's code base, you will need to copy the newer source code into your code base.</p>
+<ol>
+					    
+<li>Copy the new Log4Delphi source files into your code base, overwriting the old source files.</li>
+					    
+<li>You may need to add some of the new files to your project.</li>
+					    
+<li>Select<em> Add To Project</em> from the <em>Project</em> menu.</li>
+					    
+<li>Select all the source code (<span class="codefrag">*.pas</span>) files and click the <em>Open</em> button.</li>
+					    
+<li>Click the <em>OK</em> button.</li>
+					
+</ol>
+<a name="N1013E"></a><a name="Loggers%2C+Appenders+and+Layouts"></a>
+<h3 class="boxed">Loggers, Appenders and Layouts</h3>
+<p>The basic idea is that a <span class="codefrag">Logger</span> is responsible for actually performing the logging in an application by handling the log operations, the <span class="codefrag">Appender</span> is responsible for appending the message to its <em>target</em> and controlling that output, and the <span class="codefrag">Layout</span> is responsible for formatting the logging message.</p>
+<p>These and other core components are discussed in depth in the next seciton.</p>
+</div>
+        
+<a name="N10158"></a><a name="Five+Core+Components"></a>
+<h2 class="boxed">Five Core Components</h2>
+<div class="section">
+<p>The Log4Delphi suite consists of five core components, namely: <span class="codefrag">Level</span>s, <span class="codefrag">LoggingEvent</span>s, <span class="codefrag">Layout</span>s, <span class="codefrag">Appender</span>s and <span class="codefrag">Logger</span>s that all work together to provide the functinality of the package. Understanding these components, how they are related and how they work is essential to using Log4Delphi effectively.</p>
+<a name="N10170"></a><a name="Levels"></a>
+<h3 class="boxed">Levels</h3>
+<p>Every event that is logged has an assigned priority level. Fatal errors would naturally be more severe than a simple warning and thus would have a higher priority level. In this regard, each level has an integer value assigned to it so that it can be compared to other levels.</p>
+<p>There are five levels by default, namely (lowest prioirty to highest): <span class="codefrag">DEBUG</span>, <span class="codefrag">INFO</span>, <span class="codefrag">WARN</span>, <span class="codefrag">ERROR</span> and <span class="codefrag">FATAL</span>. Users can quite easily add another level as they see fit. Using these levels it is possible to only log events of a certain priority level, say for example: error, which results in only that level and any level with a higher priority being logged. This means that all error and fatal messages will be logged while all debug, info and warn messages will be ignored.</p>
+<p>Two special priority levels exist, these are <span class="codefrag">ALL</span> and <span class="codefrag">OFF</span>, all is used to log all messages of any priority level, even user defined ones while off is used to ignore all messages regardless of their priority level. In essence, during debugging, all should be used while production code should use off.</p>
+<p>Typical usage is by simply using the level constants defined in the <span class="codefrag">TLevelUnit</span> :</p>
+<pre class="code">
+  TLevelUnit.OFF
+  TLevelUnit.FATAL
+  TLevelUnit.ERROR
+  TLevelUnit.WARN
+  TLevelUnit.INFO
+  TLevelUnit.DEBUG
+  TLevelUnit.ALL
+				</pre>
+<a name="N1019F"></a><a name="LoggingEvents"></a>
+<h3 class="boxed">LoggingEvents</h3>
+<p>Logging events represent the actual event that gets logged and an instance is created whenever the Log4Delphi suite makes an affirmitive decision to log something. Logging events contain vital information such as the time it was created, the message itself, any exception if an exception is raised and an associated priority level.</p>
+<p>The LoggingEvent is passed around to the various Log4Delphi components that use it and the information contained in the logging event is used to format and print the information to the desired target so that it can be analyzed at a later stage.</p>
+<p>LoggingEvents are not usually used by application developers but rather only internally by Log4Delphi.</p>
+<a name="N101AF"></a><a name="Layouts"></a>
+<h3 class="boxed">Layouts</h3>
+<p>Layouts provide the functionality of formatting logging events into any number of appropriate formats. The layout takes the Logging Event and formats it appropriately into a string so that it can be written to the <span class="codefrag">target</span> by the <span class="codefrag">Appender</span>. <span class="codefrag">TLayout</span> is abstract and subclassed by a number of concrete layout classes that provide an implementation of the <span class="codefrag">format(event : TLoggingEvent)</span> method.</p>
+<p>A layout may also provide a header and footer as is the case in an HTML layout where an HTML document usually contains a header and a footer. These are returned by the <span class="codefrag">getHeader</span> and <span class="codefrag">getFooter</span> methods respectively. The default implementation returns empty strings for these. A layout can also choose to ignore any exceptions that are contained in the Logging Event, this can be determined from the <span class="codefrag">ignoresException</span> method which returns <span class="codefrag">false</span> by default. Naturally any subclasses that handle exceptions will override this method to return true such as in the XML layout.</p>
+<p>The <span class="codefrag">TLayout</span> class exposes the following:</p>
+<pre class="code">
+  function format(event : TLoggingEvent) : String; Virtual; Abstract;
+  function getContentType() : String; Virtual;
+  function getHeader() : String; Virtual;
+  function getFooter() : String; Virtual;
+  function ignoresException() : Boolean; Virtual;
+				</pre>
+<a name="N101DD"></a><a name="TSimpleLayout"></a>
+<h4>TSimpleLayout</h4>
+<p>Simple layout provides basic formatting, this output from this layout is the level of the log message followed by a dash (<span class="codefrag">-</span>) and the log message itself. It returns the default implementation for all other methods defined in the <span class="codefrag">TLayout</span> class, thus empty header and footer strings and it ignores exceptions.</p>
+<p>Example output:</p>
+<pre class="code">
+  DEBUG - Button Clicked
+					</pre>
+<a name="N101F4"></a><a name="THTMLLayout"></a>
+<h4>THTMLLayout</h4>
+<p>The HTML Layout is used to format messages into an HTML format putting them into an HTML document structuring the log messages into a table. The resulting HTML is 4.01 compliant and should have no trouble rendering in any browser. The layout overrides all methods defined in <span class="codefrag">TLayout</span> thus it provides a header and footer and handles exceptions.</p>
+<p>The <span class="codefrag">getContentType</span> method returns <span class="codefrag">text/html</span> and the layout provides a <span class="codefrag">setTite(title : String)</span> method in which it is possible to set the title of the resulting HTML document. It also provides a <span class="codefrag">getTitle</span> method to determine what the title is currently set to.</p>
+<p>Example output:</p>
+<pre class="code">
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Log4Delphi Log Messages&lt;/title&gt;
+        &lt;style type="text/css"&gt;
+        &lt;!--
+            body {background: XFFFFFF; margin: 6px; font-family: arial,sans-serif; font-size: small;}
+            table {font-family: arial,sans-serif; font-size: 9pt;}
+            th {background: #336699; color: #FFFFFF; text-align: left;}
+            td.debug {color: #339933}
+            td.warn {color: #FF9229}
+            td.error {color: #CC0000}
+            td.fatal {color: #FF0000}
+        --&gt;
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Log session start time Tue Sep 13 16:19:28 SAST 2005&lt;/p&gt;
+        &lt;table cellspacing="0" cellpadding="4" width="100%"&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Time&lt;/th&gt;
+                    &lt;th&gt;Level&lt;/th&gt;
+                    &lt;th&gt;Message&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+
+                &lt;tr&gt;
+                    &lt;td title="Timestamp"&gt;863649565&lt;/td&gt;
+                    &lt;td title="Level" class="DEBUG"&gt;DEBUG&lt;/td&gt;
+                    &lt;td title="Message"&gt;Button Clicked!&lt;/td&gt;
+                &lt;/tr&gt;
+
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+					</pre>
+<a name="N10217"></a><a name="TXMLLayout"></a>
+<h4>TXMLLayout</h4>
+<p>XML layout is used to format log messages as XML. It does not output a complete well-formed XML file, rather the output is designed to be included as an external entity in a separate file to form a correct XML file. For example, if app.log is the name of the file where the XMLLayout ouput goes, then a well-formed XML file would be:</p>
+<pre class="code">
+&lt;?xml version="1.0" ?&gt;
+&lt;!DOCTYPE log4delphi:eventSet SYSTEM "log4delphi.dtd" [&lt;!ENTITY data SYSTEM "app.log"&gt;]&gt;
+&lt;log4delphi:eventSet xmlns:log4delphi="http://log4delphi.sourceforge.net/"&gt;
+    &amp;data;
+&lt;/log4delphi:eventSet&gt;
+					</pre>
+<p>The <span class="codefrag">log4delphi.dtd</span> can be found in the <span class="codefrag">example/</span> directory in any distribution archive.</p>
+<p>The layout handles exceptions and the <span class="codefrag">getContentType</span> returns <span class="codefrag">text/xml</span>. Example output is:</p>
+<pre class="code">
+&lt;log4delphi:event timestamp="863649814" level="DEBUG"&gt;
+    &lt;log4delphi:message&gt;&lt;![CDATA[Button Clicked!]]&gt;&lt;/log4delphi:message&gt;
+&lt;/log4delphi:event&gt;
+					</pre>
+<a name="N1023B"></a><a name="TPatternLayout"></a>
+<h4>TPatternLayout</h4>
+<p>The pattern layout provides the most control over formatting of log messages. The goal of this class is to format a LoggingEvent and return the results as a String, dependant on the conversion pattern supplied.</p>
+<p>The conversion pattern is closely related to the format strings used in Delphi. A conversion pattern is composed of literal text and format control expressions called conversion specifiers. Literal text is copied verbatim to the resulting string and you are free to insert any literal text within the conversion pattern.</p>
+<p>Each conversion specifier starts with a percent sign (<span class="codefrag">%</span>) and is followed by <strong>optional</strong> <em> format modifiers</em> and a <em>conversion character</em>. The conversion character specifies the type of data, e.g. logger, level priority, date and log message. The format modifiers control such things as field width, padding and left and right justification. The following is a simple example.</p>
+<p>Let the conversion pattern be <strong>"<span class="codefrag">%d [%5p] %m%n</span>"</strong> and assume that Log4Delphi has been configured to use a TPatternLayout. Then the statements</p>
+<pre class="code">
+  logger.debug('Debug message');
+  logger.info('Info message');
+  logger.warn('Warn message');
+  logger.error('Error message');
+  logger.fatal('Fatal message');				
+					</pre>
+<p>would yield the output</p>
+<pre class="code">
+12/20/2005 4:53:33 PM [DEBUG] Debug message
+12/20/2005 4:53:33 PM [ INFO] Info message
+12/20/2005 4:53:33 PM [ WARN] Warn message
+12/20/2005 4:53:33 PM [ERROR] Error message
+12/20/2005 4:53:33 PM [FATAL] Fatal message
+					</pre>
+<p>Note that there is no explicit separator between literal text and conversion specifiers. The pattern parser knows when it has reached the end of a conversion specifier when it reads a conversion character. The recognized conversion characters are</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+					    
+<caption>Conversion Characters</caption>
+					    
+<tr>
+					        
+<th colspan="1" rowspan="1">Character</th>
+					        <th colspan="1" rowspan="1">Effect</th>
+					    
+</tr>
+					    
+<tr>
+					        
+<td colspan="1" rowspan="1"><strong><span class="codefrag">d</span></strong></td>
+					        <td colspan="1" rowspan="1">Outputs the date of the logging event. The date conversion specifier may be followed by an optional <em>date format specifier</em> enclosed in braces. This format specifier is the same as the Delphi Date-Time Format Strings, for example: <strong><span class="codefrag">%d{dd mmm yyyy hh:nn:ss:zzz}</span></strong>. For more information see the Delphi help files.</td>
+					    
+</tr>
+					    
+<tr>
+					        
+<td colspan="1" rowspan="1"><strong><span class="codefrag">m</span></strong></td>
+					        <td colspan="1" rowspan="1">Used to output the supplied application log message. Standard format specifiers apply, for example: <strong><span class="codefrag">%20.30m</span></strong>.</td>
+					    
+</tr>
+					    
+<tr>
+					        
+<td colspan="1" rowspan="1"><strong><span class="codefrag">n</span></strong></td>
+					        <td colspan="1" rowspan="1">Outputs a line separator character, typicaly mapping to ascii character 13.</td>
+					    
+</tr>
+					    
+<tr>
+					        
+<td colspan="1" rowspan="1"><strong><span class="codefrag">p</span></strong></td>
+					        <td colspan="1" rowspan="1">Outputs the priority level of the log event. Stanard format specifiers apply, for example: <strong><span class="codefrag">%-5p</span></strong>.</td>
+					    
+</tr>
+					    
+<tr>
+					        
+<td colspan="1" rowspan="1"><strong><span class="codefrag">e</span></strong></td>
+					        <td colspan="1" rowspan="1">Used to output an the associated exception's classname and message if there is an exception associated with the log event. If no exception is associated this simply outputs nothing, which means it is safe to use.</td>
+					    
+</tr>
+					    
+<tr>
+					        
+<td colspan="1" rowspan="1"><strong><span class="codefrag">L</span></strong></td>
+					        <td colspan="1" rowspan="1">Output the logger's name. Note that this must be a captial <span class="codefrag">L</span>, not lowercase. Standard format specifiers apply.</td>
+					    
+</tr>
+					
+</table>
+<p>
+<em>Note that the conversion string is case sensitive, such that "L" does not equal "l"</em>!</p>
+<p>By default the relevant information is output as is. However, with the aid of format modifiers it is possible to change the minimum field width, the maximum field width and justification. The optional format modifier is placed between the percent sign and the conversion character. For more information see the Delphi help files on "format strings".</p>
+<a name="N102F6"></a><a name="Appenders"></a>
+<h3 class="boxed">Appenders</h3>
+<p>The ability to selectively enable or disable logging requests based on their logger, and to format those messages is only part of the picture. Log4Delphi allows logging requests to output to multiple destinations, a destination being a specific <em>target</em>.</p>
+<p>An Appender is responsible for "appending" a log message to a specific target. Each appender specifies its own layout (the formatting it will use) as well as a threshold which determines the level priority that it will log. Some appenders inherently require a layout but others might not.</p>
+<p>the <span class="codefrag">TAppender</span> class exposes:</p>
+<pre class="code">
+      procedure SetLayout(ALayout : TLayout); Virtual;
+      procedure SetName(AName : String);
+      procedure SetThreshold(AThreshold : TLevel);
+      procedure SetErrorHandler(AHandler : TErrorHandler);
+      function GetLayout() : TLayout;
+      function GetName() : String;
+      function GetThreshold() : TLevel;
+      function GetErrorHandler() : TErrorHandler;
+      function IsAsSevereAsThreshold(ALevel : Tlevel) : Boolean;
+      function RequiresLayout() : Boolean; Virtual;				
+				</pre>
+<a name="N1030F"></a><a name="TFileAppender"></a>
+<h4>TFileAppender</h4>
+<p>You can use the <span class="codefrag">TFileAppender</span> class to append log messages to a file. All that is required is to specify the filename of the file to log message to. Although the file appender requires a layout, if one is not specified, <span class="codefrag">TSimpleLayout</span> is used by default.</p>
+<a name="N1031F"></a><a name="TRollingFileAppender"></a>
+<h4>TRollingFileAppender</h4>
+<p>The <span class="codefrag">TRollingFileAppender</span> allows you to specify a maximum log file size and allow you to perform log rotation of the log files. The rationale behind this is simple: it is easy to create a log file, managing a log file on the other hand is a difficult task. A log file will grow without bound unless some form of action is taken; large log files are difficult to manipulate and may lead to filesystems running out of space. Log rotation is the process where by a log file is periodically renamed to another file and a new empty file is used as the log. After a set number of file rotations, the oldest file will be removed.</p>
+<p>As a practical example, consider a log file named <span class="codefrag">app.log</span>. Using a rolling file appender we decide to make the maximum size of this file 100Kb and that we rotate between two files. Once this file reaches 100Kb the file is renamed to <span class="codefrag">app.log.1</span> and a new log file is created named <span class="codefrag">app.log</span> which is empty. Once this new file reaches 100Kb in size the old file <span class="codefrag">app.log.1</span> is deleted, the file named <span class="codefrag">app.log</span> is renamed to <span class="codefrag">app.log.1</span> and a new file named <span class="codefrag">app.log</span> is created and used. This process repeats indefinitely.</p>
+<p>
+<span class="codefrag">TRollingFileAppender</span> inherits from <span class="codefrag">TFileAppender</span> and exhibits its default behaviour unless modified by setting the maximum log file size and the backup index. The max log file size set how large the files should be before log rotation and the max backup index is the number of log files to rotate between. Setting the backup index to 0 has the effect of rotating in one file only, which means that upon log rotation, the log is destroyed and a new file is used (This should be used with caution since important log information may be lost).</p>
+<a name="N1034C"></a><a name="TDBAppender"></a>
+<h4>TDBAppender</h4>
+<p>The Database Appender is used to send messages to a database. It is flexible enough to support Borland Database Engine (BDE), Interbase Express (IBX) and Database Express (DBX) through the use of <span class="codefrag">LogInserter</span>s.</p>
+<p>The log message can be sent to any table or column in the relational database, using custom parameterized SQL which is given to the inserter to use. As an example, consider the IBXLogInserter (this code is similar if you use other database components / engines):</p>
+<pre class="code">
+inserter := TIBXLogInserter.Create(IBDatabase1,
+   'INSERT INTO Log (log_level, log_message, log_starttime, log_exception)'
+   + 'VALUES (:_level,:_msg,:_startTime,:_exception)');
+logger.addAppender(TDBAppender.Create(inserter));   
+				    </pre>
+<p>All you need to do is to drop the appropriate component onto your form, or create it dynamically and pass it to the <span class="codefrag">LogInserter</span>. Then use the inserter to create the database appender.</p>
+<p>The various inserters are:</p>
+<a name="N10368"></a><a name="TBDELogInserter"></a>
+<h5>TBDELogInserter</h5>
+<p>For those using Borland Database Engine, simply use this inserter and pass it a pre-configured <span class="codefrag">TDatabase</span> component.</p>
+<pre class="code">
+constructor Create(ADatabase: TDatabase; ASQL : String);
+				    </pre>
+<a name="N10379"></a><a name="TDBXLogInserter"></a>
+<h5>TDBXLogInserter</h5>
+<p>Used for Database Express Applications. Give this one a <span class="codefrag">TSQLConnection</span> component.</p>
+<pre class="code">
+constructor Create(ASqlConnection: TSQLConnection; ASQL : String);
+				    </pre>
+<a name="N1038A"></a><a name="TIBXLogInserter"></a>
+<h5>TIBXLogInserter</h5>
+<p>This is for Interbase Express applications. Hand this inserter a <span class="codefrag">TIBDatabase</span> component.</p>
+<pre class="code">
+constructor Create(AIBDataBase : TIBDataBase; ASQL : String);
+				    </pre>
+<a name="N1039B"></a><a name="The+SQL"></a>
+<h5>The SQL</h5>
+<p>The SQL you give to the LogInserter needs to be parameterized. Consider the following entitiy in a relational database:</p>
+<p>
+<img alt="Log ERD" src="images\logerd.gif"></p>
+<p>An example of the SQL that can be used for this table is as follows:</p>
+<pre class="code">
+INSERT INTO Log (log_level, log_message, log_starttime,
+log_exception) VALUES(:_level, :_msg, :_startTime, :_exception)
+				        </pre>
+<p>As you can see, parameters are designated with a semi-colon (<span class="codefrag">:</span>) and in Log4Delphi, all parameters begin with an unserscore (<span class="codefrag">_</span>). A list of the various parameters that you can use are:</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+				            
+<caption>SQL Parameters</caption>
+				            
+<tr>
+				                
+<th colspan="1" rowspan="1">Parameter</th>
+				                <th colspan="1" rowspan="1">Description</th>
+				            
+</tr>
+				            
+<tr>
+				                
+<td colspan="1" rowspan="1"><span class="codefrag">_msg</span></td>
+				                <td colspan="1" rowspan="1">This will resolve to the actual log message contained in the LoggingEvent.</td>
+				            
+</tr>
+				            
+<tr>
+				                
+<td colspan="1" rowspan="1"><span class="codefrag">_exception</span></td>
+				                <td colspan="1" rowspan="1">This resolves to the Exception's message property.</td>
+				            
+</tr>
+				            
+<tr>
+				                
+<td colspan="1" rowspan="1"><span class="codefrag">_exceptionclass</span></td>
+				                <td colspan="1" rowspan="1">Resolved to the Class Name of the Exception.</td>
+				            
+</tr>
+				            
+<tr>
+				                
+<td colspan="1" rowspan="1"><span class="codefrag">_startTime</span></td>
+				                <td colspan="1" rowspan="1">The time the log message is created, as a <span class="codefrag">TDateTime</span> value.</td>
+				            
+</tr>
+				            
+<tr>
+				                
+<td colspan="1" rowspan="1"><span class="codefrag">_level</span></td>
+				                <td colspan="1" rowspan="1">The priority level of the log message.</td>
+				            
+</tr>
+				            
+<tr>
+				                
+<td colspan="1" rowspan="1"><span class="codefrag">_levelCode</span></td>
+				                <td colspan="1" rowspan="1">The priority level's actual integer value.</td>
+				            
+</tr>
+				        
+</table>
+<div class="frame warning">
+<div class="label">Warning</div>
+<div class="content">The database appender has not been tested with all databases. As of this writing, only Firbird / Interbase has been tested with IBX and DBX components.</div>
+</div>
+<a name="N10429"></a><a name="Loggers"></a>
+<h3 class="boxed">Loggers</h3>
+<p>Loggers are named entities with their names being case sensistive and are responsible for performing the logging operations in an application. A root logger always exists and obeys two fundamental rules: 1) it always exists and 2) it cannot be retrieved by name. In order to access the root logger you use the static method <span class="codefrag">getLogger</span>. All other loggers are retrieved by name using <span class="codefrag">getLogger(name)</span>.</p>
+<p>Loggers may be assigned a priority level, if a given logger is not assigned a priority level then it uses the default <span class="codefrag">ALL</span> priority level. A log request with a given assigned level say <em><strong>S</strong></em> in a logger with level <strong><em>T</em></strong> is enabled if and only if S is greater or equal to T: (<strong><span class="codefrag">S&gt;=T</span></strong>).</p>
+</div>
+        
+<a name="N1044C"></a><a name="Configuration"></a>
+<h2 class="boxed">Configuration</h2>
+<div class="section">
+<p>During configuration the following occurs:</p>
+<ol>
+				
+<li>Log4Delphi's internal logging is activated and sends output to a file named 'log4delphi.log'.</li>
+				
+<li>Each of the respective Levels is initialized using the Level unit's <span class="codefrag">initialize</span> method.</li>
+				
+<li>Finally the Logger interface is initialized by calling the <span class="codefrag">initialize</span> method of the Logger unit.</li>
+			
+</ol>
+<p>Configuration is performed using one of the methods in the Configurator Unit. Currently two methods exist, <span class="codefrag">doBasicConfiguration</span> and the <span class="codefrag">doPropertiesConfiguration</span> method. Both of these methods can be used. The first provides a minimalist configuration which is fine for basic logging, the second method allows you to control the logging using a properties file.</p>
+<p>Configuration should be performed in the Application's code:</p>
+<pre class="code">
+  Application.Initialize;
+  TConfiguratorUnit.doBasicConfiguration; // ADD THIS!
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;		
+			</pre>
+<p>alternately, specifiying the properties file to read configuration from:</p>
+<pre class="code">
+  Application.Initialize;
+  TConfiguratorUnit.doPropertiesConfiguration('log4delphi.properties'); // ADD THIS!
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;				
+			</pre>
+<a name="N1047E"></a><a name="The+Configuration+File"></a>
+<h3 class="boxed">The Configuration File</h3>
+<p>An example configuration file named <span class="codefrag">log4delphi.properties</span> is provided in both binary and source distributions. We will now discuss a few of the configuration details of this file.</p>
+<p>First, it is important to note that this file may be named anything, but <span class="codefrag">log4delphi.properties</span> is a good convention to use.</p>
+<p>Next, this file may be placed anywhere on the file system but it is a good idea to place the file in the same folder as your application's executable (<span class="codefrag">.exe</span>) and then initializing Log4Delphi appropriately:</p>
+<pre class="code">
+TConfiguratorUnit.doPropertiesConfiguration(ExtractFileDir(Application.ExeName) 
+   + '\log4delphi.properties');				
+			</pre>
+<a name="N1049A"></a><a name="Controlling+Log4Delphi%27s+Internal+Logging"></a>
+<h4>Controlling Log4Delphi's Internal Logging</h4>
+<p>Log4Delphi's internal logging is controlled through the <span class="codefrag">log4delphi.debug</span> directive. Those who are interested to see what Log4Delphi is doing can set this value to <span class="codefrag">true</span>. This results in a file named <span class="codefrag">log4delphi.log</span> in the same directory as your application executable. If you do not wish to have internal logging then set this value to <span class="codefrag">false</span>.</p>
+<pre class="code">
+# Set this to true to turn on Log4Delphi's internal
+# logging
+log4delphi.debug=false					
+			</pre>
+<a name="N104B4"></a><a name="Configuring+the+Root+Logger"></a>
+<h4>Configuring the Root Logger</h4>
+<p>The next thing to do is to set the root logger by specifying the priority level and an appender's name. The format is <span class="codefrag">log4delphi.rootLogger=LEVEL, AppenderName</span>. The <em>LEVEL</em> is any one of DEBUG, INFO, WARN, ERROR or FATAL and the <em>AppenderName</em> is any alpha-numeric string of no more than 255 characters. As an example, consider setting the root logger to debug and using a file appender:</p>
+<pre class="code">
+# Set the root logger's priority threshold to DEBUG and assign an 
+# appender named "fileAppender" to it.
+log4delphi.rootLogger=DEBUG, fileAppender
+						</pre>
+<a name="N104CB"></a><a name="Configuring+the+Appender"></a>
+<h4>Configuring the Appender</h4>
+<p>The first step is to tell Log4Delphi which appender you wish to use by giving the appender class's name.</p>
+<pre class="code">
+# Specify the appender class for fileAppender.
+log4delphi.appender.fileAppender=TFileAppender
+				</pre>
+<p>Some appender's require additional information, these are set using directives that match the appender's setter methods. The TFileAppender class has a <span class="codefrag">setFile</span> method that can be used as follows:</p>
+<pre class="code">
+# Specify which file fileAppender should use.
+log4delphi.appender.fileAppender.File=app.log
+				</pre>
+<a name="N104E3"></a><a name="Setting+the+Layout"></a>
+<h4>Setting the Layout</h4>
+<p>Some appenders require a layout. This is easily set using the <span class="codefrag">layout</span> directive and specifying the layout class to use.</p>
+<pre class="code">
+# Specify the layout class for fileAppender.
+log4delphi.appender.fileAppender.layout=TSimpleLayout					
+				</pre>
+<p>You should look at the <span class="codefrag">log4delphi.properties</span> file for a complete example.</p>
+</div>
+		
+<a name="N104FC"></a><a name="Summary"></a>
+<h2 class="boxed">Summary</h2>
+<div class="section">
+<p>Log4Delphi is a easy to use but powerful and flexible logging suite that is open source and under constant development.</p>
+</div>				
+    
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Log4Delphi Project</div>
+<div id="feedback">
+    Send feedback about the website to:
+  <a id="feedbackto" href="mailto:tcmiller@users.sourceforge.net?subject=Log4Delphi-Feedback%C2%A0userguide.html">tcmiller@users.sourceforge.net</a>
+</div>
+</div>
+</body>
+</html>

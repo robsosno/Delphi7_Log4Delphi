@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.7">
+<meta name="Forrest-skin-name" content="pelt">
+<title>Log4Delphi CVS Repository</title>
+<link type="text/css" href="skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="skin/print.css" rel="stylesheet">
+<link type="text/css" href="skin/profile.css" rel="stylesheet">
+<script src="skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="">
+</head>
+<body onload="init()">
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<div class="breadtrail">
+<a href="http://www.sourceforge.net/">SourceForge</a> &gt; <a href="http://log4delphi.sourceforge.net/">Log4Delphi</a><script src="skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<div class="header">
+<div class="grouplogo">
+<a href=""></a>
+</div>
+<div class="projectlogo">
+<a href="http://log4delphi.sourceforge.net/"><img class="logoImage" alt="Log4Delphi" src="images/logo.gif" title="Log4Delphi Logging Suite for Borland Delphi"></a>
+</div>
+<div class="searchbox">
+<form action="http://www.google.com/search" method="get" class="roundtopsmall">
+<input value="http://log4delphi.sourceforge.net" name="sitesearch" type="hidden"><input onFocus="getBlank (this, 'Search the site with google');" size="25" name="q" id="query" type="text" value="Search the site with google">&nbsp; 
+                    <input attr="value" name="Search" value="Search" type="submit">
+</form>
+</div>
+<ul id="tabs">
+<li>
+<a class="base-not-selected" href="index.html">Log4Delphi</a>
+</li>
+<li>
+<a class="base-not-selected" href="quickstart.html">Quick Start</a>
+</li>
+<li>
+<a class="base-not-selected" href="overview.html">Documentation</a>
+</li>
+<li class="current">
+<a class="base-selected" href="developerguide.html">Contributing</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<div id="level2tabs"></div>
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<div id="menu">
+<div onclick="SwitchMenu('menu_selected_1.1', 'skin/')" id="menu_selected_1.1Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">Getting Involved</div>
+<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="developerguide.html">Guide</a>
+</div>
+<div class="menuitem">
+<a href="design.html" title="Log4 Delphi Design Overview">Design</a>
+</div>
+<div class="menuitem">
+<a href="releases.html" title="Log4 Delphi Release Plan">Release Plan</a>
+</div>
+<div class="menuitem">
+<a href="contact.html" title="Contact Log4Delphi">Contact</a>
+</div>
+<div class="menuitem">
+<a href="todo.html" title="Still to do">To Do</a>
+</div>
+<div class="menuitem">
+<a href="standards.html" title="Log4Delphi Coding Standards">Coding Standards</a>
+</div>
+<div class="menupage">
+<div class="menupagetitle">CVS Repo</div>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<div id="credit2"></div>
+</div>
+<div id="content">
+<script language="Javascript" type="text/javascript">
+function printit() {
+  if (window.print) {
+    window.focus();
+    window.print();
+  }
+}
+        </script><script language="Javascript" type="text/javascript">
+var NS = (navigator.appName == "Netscape");
+var VERSION = parseInt(navigator.appVersion);
+if (VERSION > 3) {
+  document.write('<div title="Print this Page" class="printlink">');
+  document.write('  <a class="dida" href="javascript:printit()">');
+  document.write('    <img alt="print - icon" src="skin/images/printer.gif" class="skin">');
+  document.write('    <br>');
+  document.write('  PRINT</a>');
+  document.write('</div>');
+}
+        </script>
+<div title="raw XML" class="xmllink">
+<a class="dida" href="cvs.xml"><img alt="XML - icon" src="skin/images/xmldoc.gif" class="skin"><br>
+        XML</a>
+</div>
+<div title="Portable Document Format" class="pdflink">
+<a class="dida" href="cvs.pdf"><img alt="PDF -icon" src="skin/images/pdfdoc.gif" class="skin"><br>
+        PDF</a>
+</div>
+<h1>Log4Delphi CVS Repository</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#About+CVS">About CVS</a>
+</li>
+<li>
+<a href="#Browsing+The+CVS+Repository">Browsing The CVS Repository</a>
+</li>
+<li>
+<a href="#Anonymous+CVS+Checkout">Anonymous CVS Checkout</a>
+</li>
+<li>
+<a href="#Developer+CVS+Commit">Developer CVS Commit</a>
+</li>
+</ul>
+</div>
+		
+<a name="N1000D"></a><a name="About+CVS"></a>
+<h2 class="boxed">About CVS</h2>
+<div class="section">
+<p>Concurrent Versions System, usually called CVS, is a tool used by many 
+				software developers to manage changes within their source code tree. 
+				CVS provides the means to store not only the current version of a piece 
+				of source code, but a record of all changes (and who made those changes) 
+				that have occurred to that source code. Use of CVS is particularly common
+				on projects with multiple developers, since CVS ensures changes made by 
+				one developer are not accidentally overwritten when another developer 
+				posts their changes to the source tree.</p>
+</div>		
+		
+<a name="N10017"></a><a name="Browsing+The+CVS+Repository"></a>
+<h2 class="boxed">Browsing The CVS Repository</h2>
+<div class="section">
+<p>The Log4Delphi CVS Repository may be browsed using a web browser at:
+				
+				<a href="http://log4delphi.cvs.sourceforge.net/log4delphi">
+					http://log4delphi.cvs.sourceforge.net/log4delphi</a>.
+				You cannot check out or view the contents of any file in the repository,
+				in order to do so you will have to use anonymous checkout.</p>
+</div>
+		
+<a name="N10027"></a><a name="Anonymous+CVS+Checkout"></a>
+<h2 class="boxed">Anonymous CVS Checkout</h2>
+<div class="section">
+<p>The CVS repository may be checked out using anonymous pserver CVS using
+				the following instructions. The module you wish to check out is specified
+				as <em>modulename</em> and the username to uses is <em>anonymous</em>.
+				When prompted for a password simply press the enter key. Windows users
+				should use a CVS client like Tortiose CVS.</p>
+<p>
+<span class="codefrag"> cvs -d:pserver:anonymous@log4delphi.cvs.sourceforge.net:/cvsroot/log4delphi login 
+				</span>
+</p>
+<p>
+<span class="codefrag"> cvs -z3 -d:pserver:anonymous@log4delphi.cvs.sourceforge.net:/cvsroot/log4delphi co -P </span>
+				<em>modulename</em>
+</p>
+<div class="frame note">
+<div class="label">Note</div>
+<div class="content">The path to the cvsroot is case sensitive and should be all lowercase: 
+				<span class="codefrag">/cvsroot/log4delphi</span>
+</div>
+</div>
+</div>
+		
+<a name="N1004B"></a><a name="Developer+CVS+Commit"></a>
+<h2 class="boxed">Developer CVS Commit</h2>
+<div class="section">
+<p>Developers will need to access the repository using CVS over SSH. This 
+				requires that Tortoise CVS be set up to use Putty. For more information
+				please look <a href="http://www.sourceforge.net/cvs/?group_id=145326">
+					here</a>.</p>
+</div>
+    
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Log4Delphi Project</div>
+<div id="feedback">
+    Send feedback about the website to:
+  <a id="feedbackto" href="mailto:tcmiller@users.sourceforge.net?subject=Log4Delphi-Feedback%C2%A0cvs.html">tcmiller@users.sourceforge.net</a>
+</div>
+</div>
+</body>
+</html>

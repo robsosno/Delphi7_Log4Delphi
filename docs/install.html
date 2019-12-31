@@ -1,0 +1,262 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.7">
+<meta name="Forrest-skin-name" content="pelt">
+<title>Installing Log4Delphi</title>
+<link type="text/css" href="skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="skin/print.css" rel="stylesheet">
+<link type="text/css" href="skin/profile.css" rel="stylesheet">
+<script src="skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="">
+</head>
+<body onload="init()">
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<div class="breadtrail">
+<a href="http://www.sourceforge.net/">SourceForge</a> &gt; <a href="http://log4delphi.sourceforge.net/">Log4Delphi</a><script src="skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<div class="header">
+<div class="grouplogo">
+<a href=""></a>
+</div>
+<div class="projectlogo">
+<a href="http://log4delphi.sourceforge.net/"><img class="logoImage" alt="Log4Delphi" src="images/logo.gif" title="Log4Delphi Logging Suite for Borland Delphi"></a>
+</div>
+<div class="searchbox">
+<form action="http://www.google.com/search" method="get" class="roundtopsmall">
+<input value="http://log4delphi.sourceforge.net" name="sitesearch" type="hidden"><input onFocus="getBlank (this, 'Search the site with google');" size="25" name="q" id="query" type="text" value="Search the site with google">&nbsp; 
+                    <input attr="value" name="Search" value="Search" type="submit">
+</form>
+</div>
+<ul id="tabs">
+<li class="current">
+<a class="base-selected" href="index.html">Log4Delphi</a>
+</li>
+<li>
+<a class="base-not-selected" href="quickstart.html">Quick Start</a>
+</li>
+<li>
+<a class="base-not-selected" href="overview.html">Documentation</a>
+</li>
+<li>
+<a class="base-not-selected" href="developerguide.html">Contributing</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<div id="level2tabs"></div>
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<div id="menu">
+<div onclick="SwitchMenu('menu_selected_1.1', 'skin/')" id="menu_selected_1.1Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">About</div>
+<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="index.html" title="Welcome to Log4Delphi">Welcome</a>
+</div>
+<div class="menuitem">
+<a href="license.html" title="Log4Delphi License">License</a>
+</div>
+<div class="menuitem">
+<a href="download.html" title="Download Log4Delphi">Download</a>
+</div>
+<div class="menupage">
+<div class="menupagetitle">Install</div>
+</div>
+<div class="menuitem">
+<a href="changes.html" title="History of Changes">Changes</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2', 'skin/')" id="menu_1.2Title" class="menutitle">Project</div>
+<div id="menu_1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="mission.html" title="Log4Delphi Project Mission">Mission</a>
+</div>
+<div class="menuitem">
+<a href="bylaws.html" title="Log4Delphi Project Bylaws">Bylaws</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<div id="credit2"></div>
+</div>
+<div id="content">
+<script language="Javascript" type="text/javascript">
+function printit() {
+  if (window.print) {
+    window.focus();
+    window.print();
+  }
+}
+        </script><script language="Javascript" type="text/javascript">
+var NS = (navigator.appName == "Netscape");
+var VERSION = parseInt(navigator.appVersion);
+if (VERSION > 3) {
+  document.write('<div title="Print this Page" class="printlink">');
+  document.write('  <a class="dida" href="javascript:printit()">');
+  document.write('    <img alt="print - icon" src="skin/images/printer.gif" class="skin">');
+  document.write('    <br>');
+  document.write('  PRINT</a>');
+  document.write('</div>');
+}
+        </script>
+<div title="raw XML" class="xmllink">
+<a class="dida" href="install.xml"><img alt="XML - icon" src="skin/images/xmldoc.gif" class="skin"><br>
+        XML</a>
+</div>
+<div title="Portable Document Format" class="pdflink">
+<a class="dida" href="install.pdf"><img alt="PDF -icon" src="skin/images/pdfdoc.gif" class="skin"><br>
+        PDF</a>
+</div>
+<h1>Installing Log4Delphi</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#Extracting+The+Archive">Extracting The Archive</a>
+</li>
+<li>
+<a href="#Installing">Installing</a>
+<ul class="minitoc">
+<li>
+<a href="#Installing+The+Package">Installing The Package</a>
+</li>
+<li>
+<a href="#Using+The+Source+Code">Using The Source Code</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Building+Log4Delphi+From+Source">Building Log4Delphi From Source</a>
+</li>
+</ul>
+</div>
+		
+<a name="N1000D"></a><a name="Extracting+The+Archive"></a>
+<h2 class="boxed">Extracting The Archive</h2>
+<div class="section">
+<p>The following instructions can be used for both binary and source 
+				distributions.</p>
+<p>There are two archive versions available, a ZIP archive which may
+				be extracted using a program like Winzip and a GNU-Zipped 
+				Tarball that can also be extracted using Winzip.</p>
+<p>Extract the archive to a location of your choice. A resulting
+				folder named <span class="codefrag">log4delphi-</span><em>version</em> will contain
+				the contents of the package.</p>
+</div>
+        
+<a name="N10022"></a><a name="Installing"></a>
+<h2 class="boxed">Installing</h2>
+<div class="section">
+<p>There are two ways in which you can install and use Log4Delphi. 
+				The first is to install the package and the second is to simply 
+				include the source code in your application's code base. Both have 
+				pros and cons and should be carefully considered before making the 
+				decision.</p>
+<a name="N1002B"></a><a name="Installing+The+Package"></a>
+<h3 class="boxed">Installing The Package</h3>
+<p>Installing the Log4Delphi package will make it available to be 
+					used in all your projects.</p>
+<p>Using a binary distribution (<span class="codefrag">log4delphi-</span><em>version</em>
+					<span class="codefrag">-bin.</span><em>archive</em>), the steps are:</p>
+<ol>
+					
+<li>Launch Delphi.</li>
+					
+<li>Select <span class="codefrag">Component &gt; Install Packages</span> from
+						the main menu.</li>
+					
+<li>Click the <span class="codefrag">Add</span> button.</li>
+					
+<li>Browse to where you extracted the archive and select the
+						file named <span class="codefrag">log4delphi.bpl</span>, should be in the
+						<span class="codefrag">bin/</span> directory.</li>
+					
+<li>You may need to add the compilation units to your
+						library path. To do so, select 
+						<span class="codefrag">Tools &gt; Environment Options</span> from the
+						main menu.</li>
+					
+<li>Select the Library Tab and add the folder containing
+						<span class="codefrag">log4delphi.bpl</span> to the library path.</li>
+					
+<li>You are ready to go!</li>
+				
+</ol>
+<a name="N1006C"></a><a name="Using+The+Source+Code"></a>
+<h3 class="boxed">Using The Source Code</h3>
+<p>This option is best for people who wish to add to or extend 
+					Log4Delphi or people who are busy developing Log4Delphi or
+					people who wish to include Log4Delphi into their existing
+					project's code base.</p>
+<p>Using a source distribution (<span class="codefrag">log4delphi-</span><em>version</em>
+					<span class="codefrag">-src.</span><em>archive</em>), the steps are:</p>
+<ol>
+					
+<li>Copy all the *.pas files from the 
+						<span class="codefrag">log4delphi\src\delphi</span> directory to your
+						project's source directory (include the <span class="codefrag">util</span>)
+						directory.</li>
+					
+<li>Launch Delphi and Open your project.</li>
+					
+<li>Select <span class="codefrag">Project &gt; Add To Project</span> in the
+						main menu.</li>
+					
+<li>In the dialog that opens, select all the Log4Delphi source 
+						files <span class="codefrag">*.pas</span> that you added earlier.</li>
+					
+<li>Click the <span class="codefrag">Open</span> button.</li>
+					
+<li>Now build your project.</li>
+					
+<li>You are ready to go!</li>
+				
+</ol>
+</div>
+		
+<a name="N100AB"></a><a name="Building+Log4Delphi+From+Source"></a>
+<h2 class="boxed">Building Log4Delphi From Source</h2>
+<div class="section">
+<p>The source distribution containsa Makefile that can be used to build
+				Log4Delphi from source. You can use Borland's Make which is installed
+				automatically by Delphi.</p>
+<p>Open a command prompt (MS-DOS Prompt) and navigate to the root source
+				directory. Simply issue the command <span class="codefrag">make</span> and Log4Delphi will
+				be built.</p>
+<p>The Makefile will fail to complete and will not generate HTML documentation.
+				This is because you need to have Apache Forrest installed and set up before
+				running make. This is not required to build Log4Delphi, but if you wish
+				to generate the HTML docs then you need to have it.</p>
+</div>
+    
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Log4Delphi Project</div>
+<div id="feedback">
+    Send feedback about the website to:
+  <a id="feedbackto" href="mailto:tcmiller@users.sourceforge.net?subject=Log4Delphi-Feedback%C2%A0install.html">tcmiller@users.sourceforge.net</a>
+</div>
+</div>
+</body>
+</html>
